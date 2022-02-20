@@ -1,0 +1,95 @@
+{
+  "workbench.startupEditor": "none",
+  "editor.wordWrap": "on",
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "emmet.syntaxProfiles": {
+    "javascript": "html"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "files.autoSave": "onFocusChange",
+  "window.restoreWindows": "none",
+  "terminal.integrated.fontFamily": "'Cascadia Code'",
+  "extensions.ignoreRecommendations": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Prettier
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.insertPragma": false,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.proseWrap": "preserve",
+  "prettier.quoteProps": "preserve",
+  "prettier.requirePragma": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "none",
+  "prettier.useTabs": false,
+  "prettier.vueIndentScriptAndStyle": false,
+  "prettier.printWidth": 100,
+
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontFamily": "Cascadia Code PL",
+  "update.showReleaseNotes": false,
+  "git.enableSmartCommit": false,
+  "editor.semanticHighlighting.enabled": false,
+  "bracketPairColorizer.scopeLineCSS": [
+    "borderStyle : solid",
+    "borderWidth : 1px",
+    "borderColor : {color}; opacity: 0.5"
+  ],
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    ["Gold", "Orchid", "LightSkyBlue"] /*Default*/,
+    //["#fabd2f", "#d3869b", "#83a598"] /*Gruvbox Dark Material*/,
+    "Red"
+  ],
+  "editor.fontLigatures": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "json": true
+  },
+  "bracketPairColorizer.depreciation-notice": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "gitlens.advanced.messages": {
+    "suppressGitDisabledWarning": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "git.confirmSync": false,
+  "editor.minimap.enabled": false,
+  "eslint.format.enable": true,
+  "explorer.confirmDelete": false,
+  "editor.fontSize": 15,
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.renderWhitespace": "none"
+}
