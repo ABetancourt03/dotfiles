@@ -53,7 +53,6 @@
   "prettier.printWidth": 100,
 
   "explorer.confirmDragAndDrop": false,
-  "editor.fontFamily": "Cascadia Code PL",
   "update.showReleaseNotes": false,
   "git.enableSmartCommit": false,
   "editor.semanticHighlighting.enabled": false,
@@ -89,7 +88,9 @@
   "editor.minimap.enabled": false,
   "eslint.format.enable": true,
   "explorer.confirmDelete": false,
-  "editor.fontSize": 15,
-  "workbench.colorTheme": "One Dark Pro",
-  "editor.renderWhitespace": "none"
+  "editor.fontSize": 16,
+  "editor.renderWhitespace": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "sync.autoUpload": true,
+  "editor.fontFamily": "Consolas ligaturized v2"
 }
