@@ -186,5 +186,50 @@
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "Consolas ligaturized v2",
   "sync.autoUpload": true,
-  "workbench.colorTheme": "Gruvbox Dark (Medium)"
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorCustomizations": {
+    "[Gruvbox Dark Hard]": {
+      "editor.background": "#282828",
+      "editor.foreground": "#ebdbb2",
+      "sideBar.background": "#282828",
+      "sideBarSectionHeader.background": "#282828",
+      "activityBar.background": "#282828",
+      "statusBar.background": "#202020",
+      "titleBar.activeBackground": "#202020",
+      "editorGroupHeader.tabsBackground": "#202020",
+      "tab.inactiveBackground": "#282828",
+      "tab.activeBackground": "#303030",
+      "tab.activeForeground": "#fbf1c7",
+      "tab.inactiveForeground": "#bdae93",
+      "tab.hoverBackground": "#353535",
+      "tab.activeBorder": "#fbf1c7"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "strings": "#b8bb26",
+    "numbers": "#d3869b",
+    "variables": "#ebdbb2",
+    "keywords": "#fe8019",
+    "functions": "#ebdbb2",
+    "textMateRules": [
+      {
+        "scope": "keyword.operator",
+        "settings": {
+          "foreground": "#ebdbb2"
+        }
+      },
+      {
+        "scope": "keyword.control",
+        "settings": {
+          "foreground": "#fb4934"
+        }
+      },
+      {
+        "scope": "constant.numeric",
+        "settings": {
+          "foreground": "#d3869b"
+        }
+      }
+    ]
+  }
 }
