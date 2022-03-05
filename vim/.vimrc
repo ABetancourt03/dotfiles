@@ -105,7 +105,6 @@ Plug 'sainnhe/gruvbox-material' "colorscheme gruvbox-material
 Plug 'jsit/toast.vim' "colorscheme toast
 Plug 'phanviet/vim-monokai-pro' "colorscheme monokai_pro
 Plug 'dracula/vim' "colorscheme dracula
-Plug 'drewtempelmeyer/palenight' "colorscheme palenight
 
 " IDE
 Plug 'preservim/nerdcommenter'
@@ -113,6 +112,9 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'yggdroot/indentline'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
+
+" code info
+Plug 'APZelos/blamer.nvim'
 
 " code navigation
 Plug 'easymotion/vim-easymotion'
@@ -151,20 +153,24 @@ endif
 
 call plug#end()
 
+" colorscheme
 set termguicolors
-colorscheme dracula
+colorscheme gruvbox
 let g:gruvbox_dark_contrast='hard'
 set background=dark
 
 " vim lightline
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
+" coc plugins
 let g:coc_global_extensions = [ 'coc-tsserver' ]
 let g:coc_global_extensions = [ 'coc-css' ]
 let g:coc_global_extensions = [ 'coc-html' ]
 let g:coc_global_extensions = [ 'coc-python' ]
+let g:coc_global_extensions = ['coc-tslint']
+let g:coc_global_extensions = [ 'coc-tslint-plugin']
 
 " code navigation
 nmap <silent> gd <Plug>(coc-definition)
@@ -174,7 +180,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 "set mouse=a
 
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
@@ -198,7 +204,7 @@ let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'    "enable all function in all mode.
 
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascript.jsx EmmetInstall
+autocmd FileType html,css,javascript,jsx EmmetInstall
 
 " jsx syntax config
 let g:jsx_ext_required = 0
@@ -221,3 +227,12 @@ let g:user_emmet_settings = {
 \      'extends' : 'jsx',
 \  },
 \}
+
+" blamer
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+let g:blamer_show_in_visual_modes = 0
+let g:blamer_prefix = '   '
+let g:blamer_template = '<committer> | <summary>'
+let g:blamer_date_format = '%d/%m/%y'
+let g:blamer_relative_time = 1
