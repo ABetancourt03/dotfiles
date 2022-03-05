@@ -155,13 +155,13 @@ call plug#end()
 
 " colorscheme
 set termguicolors
-colorscheme gruvbox
+colorscheme dracula
 let g:gruvbox_dark_contrast='hard'
 set background=dark
 
 " vim lightline
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'dracula',
       \ }
 
 " coc plugins
