@@ -105,6 +105,8 @@ Plug 'sainnhe/gruvbox-material' "colorscheme gruvbox-material
 Plug 'jsit/toast.vim' "colorscheme toast
 Plug 'phanviet/vim-monokai-pro' "colorscheme monokai_pro
 Plug 'dracula/vim' "colorscheme dracula
+Plug 'dikiaap/minimalist' "colorscheme minimalist
+Plug 'markvincze/panda-vim' "colorscheme panda
 
 " IDE
 Plug 'preservim/nerdcommenter'
@@ -137,6 +139,9 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'mgechev/vim-jsx'
 Plug 'sheerun/vim-polyglot'
 
+" code formatting
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 " autocomplete
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
@@ -154,14 +159,14 @@ endif
 call plug#end()
 
 " colorscheme
-set termguicolors
-colorscheme dracula
+"set termguicolors
+colorscheme gruvbox
 let g:gruvbox_dark_contrast='hard'
 set background=dark
 
 " vim lightline
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
 " coc plugins
@@ -180,16 +185,20 @@ nmap <silent> gr <Plug>(coc-references)
 
 "set mouse=a
 
-let NERDTreeQuitOnOpen=0
+let NERDTreeQuitOnOpen=1
 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
+
+" split resize
+nnoremap <Leader>> 10<C-w>>
+nnoremap <Leader>< 10<C-w><
 
 " Autocompletado
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" Fix bsckspace indent
+" Fix backspace indent
 set backspace=indent,eol,start
 
 " Remember cursor position
@@ -218,10 +227,10 @@ map <Leader>b :Buffers<cr>
 " run current file
 nnoremap <Leader>n :!node %<cr>
 
-"vim signify
+" vim signify
 set updatetime=100
 
-"emmet jsx
+" emmet jsx
 let g:user_emmet_settings = {
 \  'javascript' : {
 \      'extends' : 'jsx',
@@ -229,10 +238,16 @@ let g:user_emmet_settings = {
 \}
 
 " blamer
-let g:blamer_enabled = 1
+let g:blamer_enabled = 0
 let g:blamer_delay = 500
 let g:blamer_show_in_visual_modes = 0
 let g:blamer_prefix = '   '
 let g:blamer_template = '<committer> | <summary>'
 let g:blamer_date_format = '%d/%m/%y'
 let g:blamer_relative_time = 1
+
+set splitright
+
+" prettier
+let g:prettier#autoformat = 1
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync

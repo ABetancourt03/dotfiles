@@ -18,7 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="nanotech"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias v=openNvim
+#alias v=openNvim
 alias guc="git reset --soft HEAD~"
 # NVM configuration
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -122,13 +122,13 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-function openNvim {
-  if [ $# -eq 0 ]; then
-    nvim ./
-  else
-    nvim $1
-  fi
-}
+#function openNvim {
+  #if [ $# -eq 0 ]; then
+    #nvim ./
+  #else
+    #nvim $1
+  #fi
+#}
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
@@ -153,35 +153,33 @@ export JAVA_HOME=/usr/bin/java
 
 # ----- aliases -----
 
-# --- system ---
-alias clearRamCache='sudo sync && sudo sysctl -w vm.drop_caches=3 && c'
-
 # --- directories ---
 alias dev='cd ~/Dev && c'
 alias home='cd && c'
+alias v='vim'
 
 # --- development ---
-alias sublime='sublime-text.subl . && c'
+alias startdev='code . && npm run dev && c'
 
 # python
-alias py='python3'
+alias py='python'
 
 # --- git ---
-alias gst='git status'
-alias gp='git push'
-alias gl='git pull'
-alias gaa='git add -A'
-alias gc='git commit'
-alias gi='git init'
+# alias gst='git status'
+# alias gp='git push'
+# alias gl='git pull'
+# alias gaa='git add -A'
+# alias gc='git commit'
+# alias gi='git init'
 
 # --- terminal ---
 alias zshrc='source ~/.zshrc && c'
 alias c='clear'
-alias vim-cfg='v ~/.config/nvim/init.vim && c'
-alias vim-zshrc='v ~/.zshrc && c'
+alias code-zshrc='code ~/.zshrc && c'
+alias vim-zshrc='vim ~/.zshrc && c'
+alias vimrc='vim ~/.vimrc'
 
-# --- display ---
-alias set1280x720='xrandr --newmode "1280x720_60.00"  74.48  1280 1336 1472 1664  720 721 724 746  -HSync +Vsync && xrandr --addmode VGA-1 "1280x720_60.00" && xrandr --output VGA-1 --mode "1280x720_60.00"'
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
