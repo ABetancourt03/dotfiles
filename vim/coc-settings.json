@@ -1,0 +1,27 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "css",
+    "html",
+    "json"
+  ],
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.insertPragma": false,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.proseWrap": "preserve",
+  "prettier.quoteProps": "preserve",
+  "prettier.requirePragma": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "none",
+  "prettier.useTabs": false,
+  "prettier.vueIndentScriptAndStyle": false
+}
