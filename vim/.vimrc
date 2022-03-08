@@ -7,6 +7,7 @@ filetype off
 
 " Turn on syntax highlighting.
 syntax on
+syntax enable
 
 " For plug-ins to load correctly.
 filetype plugin indent on
@@ -107,6 +108,7 @@ Plug 'phanviet/vim-monokai-pro' "colorscheme monokai_pro
 Plug 'dracula/vim' "colorscheme dracula
 Plug 'dikiaap/minimalist' "colorscheme minimalist
 Plug 'markvincze/panda-vim' "colorscheme panda
+Plug 'lifepillar/vim-solarized8'
 
 " IDE
 Plug 'preservim/nerdcommenter'
@@ -139,9 +141,6 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'mgechev/vim-jsx'
 Plug 'sheerun/vim-polyglot'
 
-" code formatting
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
 " autocomplete
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
@@ -159,23 +158,18 @@ endif
 call plug#end()
 
 " colorscheme
-"set termguicolors
-colorscheme gruvbox
+set termguicolors
+colorscheme solarized8
 let g:gruvbox_dark_contrast='hard'
 set background=dark
 
 " vim lightline
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'solarized8',
       \ }
 
 " coc plugins
-let g:coc_global_extensions = [ 'coc-tsserver' ]
-let g:coc_global_extensions = [ 'coc-css' ]
-let g:coc_global_extensions = [ 'coc-html' ]
-let g:coc_global_extensions = [ 'coc-python' ]
-let g:coc_global_extensions = ['coc-tslint']
-let g:coc_global_extensions = [ 'coc-tslint-plugin']
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-css', 'coc-html', 'coc-python', 'coc-tslint', 'coc-tslint-plugin', 'coc-json', 'coc-emmet', 'coc-prettier']
 
 " code navigation
 nmap <silent> gd <Plug>(coc-definition)
@@ -213,7 +207,7 @@ let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'    "enable all function in all mode.
 
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascript,jsx EmmetInstall
+autocmd FileType html,css,javascript,jsx,typescript,tsx EmmetInstall
 
 " jsx syntax config
 let g:jsx_ext_required = 0
@@ -248,6 +242,4 @@ let g:blamer_relative_time = 1
 
 set splitright
 
-" prettier
-let g:prettier#autoformat = 1
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
+:imap ii <Esc>
