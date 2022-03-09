@@ -116,6 +116,7 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'yggdroot/indentline'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'ryanoasis/vim-devicons'
 
 " code info
 Plug 'APZelos/blamer.nvim'
@@ -169,7 +170,7 @@ let g:lightline = {
       \ }
 
 " coc plugins
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-css', 'coc-html', 'coc-python', 'coc-tslint', 'coc-tslint-plugin', 'coc-json', 'coc-emmet', 'coc-prettier']
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-css', 'coc-html', 'coc-python', 'coc-tslint', 'coc-tslint-plugin', 'coc-json', 'coc-emmet', 'coc-prettier', 'coc-discord', 'coc-svelte', 'coc-tailwindcss', 'coc-html-css-support', 'coc-eslint' ]
 
 " code navigation
 nmap <silent> gd <Plug>(coc-definition)
