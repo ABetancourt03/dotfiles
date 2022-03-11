@@ -204,7 +204,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <leader>do <Plug>(coc-codeaction)
+nmap <silent>do <Plug>(coc-codeaction)
 
 "set mouse=a
 
