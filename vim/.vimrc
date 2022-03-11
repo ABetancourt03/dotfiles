@@ -114,9 +114,15 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'preservim/nerdcommenter'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'yggdroot/indentline'
-Plug 'itchyny/lightline.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'ryanoasis/vim-devicons'
+
+" vim lightline
+"Plug 'itchyny/lightline.vim'
+"Plug 'shinchu/lightline-gruvbox.vim'
+
+" vim airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " code info
 Plug 'APZelos/blamer.nvim'
@@ -141,6 +147,7 @@ Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'mgechev/vim-jsx'
 Plug 'sheerun/vim-polyglot'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " autocomplete
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
@@ -160,23 +167,44 @@ call plug#end()
 
 " colorscheme
 set termguicolors
-colorscheme solarized8
+colorscheme ayu
 let g:gruvbox_dark_contrast='hard'
 set background=dark
 
+" vim airline
+let g:airline_theme='dark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
 " vim lightline
-let g:lightline = {
-      \ 'colorscheme': 'solarized8',
-      \ }
+"let g:lightline = {
+      "\ 'colorscheme': 'onedark',
+      "\ }
 
 " coc plugins
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-css', 'coc-html', 'coc-python', 'coc-tslint', 'coc-tslint-plugin', 'coc-json', 'coc-emmet', 'coc-prettier', 'coc-discord', 'coc-svelte', 'coc-tailwindcss', 'coc-html-css-support', 'coc-eslint' ]
+let g:coc_global_extensions = [
+      \ 'coc-tsserver', 'coc-css',
+      \ 'coc-html', 'coc-python',
+      \ 'coc-tslint',
+      \ 'coc-tslint-plugin',
+      \ 'coc-json',
+      \ 'coc-emmet',
+      \ 'coc-prettier',
+      \ 'coc-discord',
+      \ 'coc-svelte',
+      \ 'coc-tailwindcss',
+      \ 'coc-html-css-support',
+      \ 'coc-eslint'
+      \ ]
 
 " code navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <leader>do <Plug>(coc-codeaction)
 
 "set mouse=a
 
@@ -188,6 +216,10 @@ nmap <Leader>nt :NERDTreeFind<CR>
 " split resize
 nnoremap <Leader>> 10<C-w>>
 nnoremap <Leader>< 10<C-w><
+
+" switch buffers
+map <Tab> :bnext<CR>
+map <S-Tab> :bprev<CR>
 
 " Autocompletado
 filetype plugin on
@@ -244,3 +276,4 @@ let g:blamer_relative_time = 1
 set splitright
 
 :imap ii <Esc>
+
