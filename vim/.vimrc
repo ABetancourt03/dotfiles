@@ -3,7 +3,7 @@ set nocompatible
 set nolist
 set rnu
 " Helps force plug-ins to load correctly when it is turned back on below.
-filetype off
+filetype on
 
 " Turn on syntax highlighting.
 syntax on
@@ -33,6 +33,7 @@ set noshiftround
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
 set scrolloff=5
+
 " Fixes common backspace problems
 set backspace=indent,eol,start
 
@@ -146,8 +147,10 @@ Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'mgechev/vim-jsx'
+Plug 'ianks/vim-tsx'
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'vim-python/python-syntax'
 
 " autocomplete
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
@@ -167,16 +170,18 @@ call plug#end()
 
 " colorscheme
 set termguicolors
-colorscheme ayu
+colorscheme gruvbox
+let ayucolor='mirage'
 let g:gruvbox_dark_contrast='hard'
 set background=dark
 
 " vim airline
-let g:airline_theme='dark'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_powerline_fonts = 1
 
 " vim lightline
 "let g:lightline = {
@@ -185,26 +190,26 @@ let g:airline#extensions#tabline#formatter = 'default'
 
 " coc plugins
 let g:coc_global_extensions = [
-      \ 'coc-tsserver', 'coc-css',
-      \ 'coc-html', 'coc-python',
-      \ 'coc-tslint',
-      \ 'coc-tslint-plugin',
-      \ 'coc-json',
-      \ 'coc-emmet',
-      \ 'coc-prettier',
-      \ 'coc-discord',
-      \ 'coc-svelte',
-      \ 'coc-tailwindcss',
-      \ 'coc-html-css-support',
-      \ 'coc-eslint'
-      \ ]
+\  'coc-tsserver',
+\  'coc-css',
+\  'coc-html',
+\  'coc-python',
+\  'coc-json',
+\  'coc-emmet',
+\  'coc-prettier',
+\  'coc-discord',
+\  'coc-svelte',
+\  'coc-tailwindcss',
+\  'coc-html-css-support',
+\  'coc-eslint'
+\ ]
 
 " code navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent>do <Plug>(coc-codeaction)
+nmap <silent> do <Plug>(coc-codeaction)
 
 "set mouse=a
 
@@ -246,6 +251,10 @@ autocmd FileType html,css,javascript,jsx,typescript,tsx EmmetInstall
 let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 1
 
+" tsx syntax config
+let g:tsx_ext_required = 0
+let g:tsx_pragma_required = 1
+
 nnoremap <Leader>; $a;<Esc>
 
 " buffers
@@ -262,6 +271,9 @@ let g:user_emmet_settings = {
 \  'javascript' : {
 \      'extends' : 'jsx',
 \  },
+\  'typescript' : {
+\      'extends': 'tsx'
+\  }
 \}
 
 " blamer
@@ -276,4 +288,3 @@ let g:blamer_relative_time = 1
 set splitright
 
 :imap ii <Esc>
-
