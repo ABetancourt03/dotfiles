@@ -170,13 +170,13 @@ call plug#end()
 
 " colorscheme
 set termguicolors
-colorscheme gruvbox
+colorscheme ayu
 let ayucolor='mirage'
 let g:gruvbox_dark_contrast='hard'
 set background=dark
 
 " vim airline
-let g:airline_theme='gruvbox'
+let g:airline_theme='dark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -288,3 +288,4 @@ let g:blamer_relative_time = 1
 set splitright
 
 :imap ii <Esc>
+:imap <C-Return> <Esc>o
