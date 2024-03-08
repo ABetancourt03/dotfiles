@@ -1,4 +1,4 @@
-Set compatibility to Vim only.
+"Set compatibility to Vim only.
 set nocompatible
 set nolist
 set rnu
