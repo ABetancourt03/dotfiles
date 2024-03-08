@@ -1,4 +1,4 @@
-" Set compatibility to Vim only.
+Set compatibility to Vim only.
 set nocompatible
 set nolist
 set rnu
@@ -110,6 +110,8 @@ Plug 'dracula/vim' "colorscheme dracula
 Plug 'dikiaap/minimalist' "colorscheme minimalist
 Plug 'markvincze/panda-vim' "colorscheme panda
 Plug 'lifepillar/vim-solarized8'
+Plug 'connorholyday/vim-snazzy'
+Plug 'folke/tokyonight.nvim'
 
 " IDE
 Plug 'preservim/nerdcommenter'
@@ -118,12 +120,16 @@ Plug 'yggdroot/indentline'
 Plug 'ryanoasis/vim-devicons'
 
 " vim lightline
-"Plug 'itchyny/lightline.vim'
-"Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
 
 " vim airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+
+" vim lualine
+"Plug 'nvim-lualine/lualine.nvim'
+"Plug 'nvim-tree/nvim-web-devicons'
 
 " code info
 Plug 'APZelos/blamer.nvim'
@@ -152,8 +158,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'vim-python/python-syntax'
 
+" astro
+Plug 'wuelnerdotexe/vim-astro'
+
 " autocomplete
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -170,23 +182,23 @@ call plug#end()
 
 " colorscheme
 set termguicolors
-colorscheme ayu
+colorscheme tokyonight-night
 let ayucolor='mirage'
 let g:gruvbox_dark_contrast='hard'
-set background=dark
+"set background=dark
 
 " vim airline
-let g:airline_theme='dark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_powerline_fonts = 1
+"let g:airline_theme='dracula'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#formatter = 'default'
+"let g:airline_powerline_fonts = 1
 
 " vim lightline
-"let g:lightline = {
-      "\ 'colorscheme': 'onedark',
-      "\ }
+let g:lightline = {
+      \ 'colorscheme': 'tokyonight',
+      \ }
 
 " coc plugins
 let g:coc_global_extensions = [
@@ -199,9 +211,10 @@ let g:coc_global_extensions = [
 \  'coc-prettier',
 \  'coc-discord',
 \  'coc-svelte',
-\  'coc-tailwindcss',
 \  'coc-html-css-support',
-\  'coc-eslint'
+\  'coc-eslint',
+\  'coc-powershell',
+\  'coc-tailwindcss'
 \ ]
 
 " code navigation
@@ -211,7 +224,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> do <Plug>(coc-codeaction)
 
-"set mouse=a
+set mouse=a
 
 let NERDTreeQuitOnOpen=1
 
@@ -245,7 +258,7 @@ let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'    "enable all function in all mode.
 
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascript,jsx,typescript,tsx EmmetInstall
+autocmd FileType html,css,javascript,jsx,typescript,tsx,astro EmmetInstall
 
 " jsx syntax config
 let g:jsx_ext_required = 0
@@ -273,6 +286,9 @@ let g:user_emmet_settings = {
 \  },
 \  'typescript' : {
 \      'extends': 'tsx'
+\  },
+\  'astro' : {
+\      'extends': 'astro'
 \  }
 \}
 
@@ -285,7 +301,10 @@ let g:blamer_template = '<committer> | <summary>'
 let g:blamer_date_format = '%d/%m/%y'
 let g:blamer_relative_time = 1
 
+" astro syntax
+let g:astro_typescript = 'enable'
+let g:astro_stylus = 'enable'
+
 set splitright
 
 :imap ii <Esc>
-:imap <C-Return> <Esc>o
