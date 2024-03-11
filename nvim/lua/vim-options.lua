@@ -15,7 +15,7 @@ vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set splitright")
 
---vim.o.termguicolors = true
+vim.o.termguicolors = true
 
 vim.keymap.set("n", "<Tab>", ":bnext<cr>")
 vim.keymap.set("n", "<S-Tab>", ":bprev<cr>")

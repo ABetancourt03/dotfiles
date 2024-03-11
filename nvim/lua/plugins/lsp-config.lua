@@ -39,30 +39,39 @@ return {
       lspconfig.tsserver.setup({
         capabilities = capabilities,
       })
+
       lspconfig.html.setup({
         capabilities = capabilities,
       })
+
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
+
       lspconfig.astro.setup({
         capabilities = capabilities,
       })
+
       lspconfig.cssls.setup({
         capabilities = capabilities,
       })
+
       lspconfig.cssmodules_ls.setup({
         capabilities = capabilities,
       })
+
       lspconfig.unocss.setup({
         capabilities = capabilities,
       })
+
       lspconfig.tailwindcss.setup({
         capabilities = capabilities,
       })
+
       lspconfig.powershell_es.setup({
         capabilities = capabilities,
       })
+
       lspconfig.emmet_ls.setup({
         capabilities = capabilities,
       })
