@@ -28,8 +28,8 @@ alias c='clear'
 
 alias zshrc='nvim ~/.zshrc'
 alias vimrc='cd ~/.config/nvim'
-alias dotfiles='cd /mnt/e/configs'
-alias winhome='cd /mnt/c/Users/Angelo'
+alias dotfiles='cd ~/dotfiles && c'
+alias winhome='cd /mnt/c/Users/Angelo && c'
 
 alias tilingon='komorebic.exe start --whkd'
 alias tilingoff='komorebic.exe stop'
@@ -40,4 +40,14 @@ alias glog='git log --all --graph --format=oneline'
 
 alias v='nvim'
 alias py='python'
+
+# get node version of the project
+cd() {
+  builtin cd "$@"
+  if [[ -f .nvmrc ]]; then
+    nvm use > /dev/null
+    # Si quieres que te diga la versión
+    nvm use
+  fi
+}
 
