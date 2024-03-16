@@ -9,6 +9,7 @@ return {
         lua = { "stylua" },
         json = { "prettier" },
         css = { "prettier" },
+        astro = { "prettier" }
       },
       format_on_save = {
         lsp_fallback = true,
