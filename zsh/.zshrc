@@ -36,8 +36,6 @@ alias tilingoff='komorebic.exe stop'
 
 alias dev='cd ~/Dev && c'
 
-alias glog='git log --all --graph --format=oneline'
-
 alias v='nvim'
 alias py='python'
 
