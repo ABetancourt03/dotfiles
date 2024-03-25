@@ -1,12 +1,21 @@
 require 'nvim-treesitter.configs'.setup {
-  build = ":TSUpdate",
-  config = function()
-    local configs = require("nvim-treesitter.configs")
+  ensure_installed = {
+    "c",
+    "lua",
+    "rust",
+    "ruby",
+    "vim",
+    "html",
+    "astro"
+  },
 
-    configs.setup({
-      auto_install = true,
-      highlight = { enable = true },
-      indent = { enable = true },
-    })
-  end,
+  sync_install = false,
+  auto_install = true,
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true,
+  },
 }
+
