@@ -1,12 +1,12 @@
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = {
-    "c",
     "lua",
-    "rust",
-    "ruby",
     "vim",
     "html",
-    "astro"
+    "astro",
+    "javascript",
+    "typescript",
+    "python",
   },
 
   sync_install = false,
@@ -18,4 +18,3 @@ require 'nvim-treesitter.configs'.setup {
     enable = true,
   },
 }
-
