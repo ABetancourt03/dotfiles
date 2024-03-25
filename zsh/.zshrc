@@ -22,7 +22,7 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export GIT_EDITOR=nvim
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 
 alias c='clear'
 
@@ -49,3 +49,18 @@ cd() {
   fi
 }
 
+
+# pnpm
+export PNPM_HOME="/home/h4cker/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+PATH=~/.console-ninja/.bin:$PATH
+
+PATH=$HOME/ruby/gems/bin:$PATH
+GEM_HOME=$HOME/ruby
+GEM_PATH=$HOME/ruby/gems:/usr/lib/ruby/gems/1.8
+export PATH GEM_HOME GEM_PATH
