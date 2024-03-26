@@ -4,7 +4,7 @@ require("lazy").setup({
   "mattn/emmet-vim",
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
-  "ellisonleao/gruvbox.nvim",
+  "morhetz/gruvbox",
   "dracula/vim",
   "nvim-lualine/lualine.nvim",
   "nvim-treesitter/nvim-treesitter",
