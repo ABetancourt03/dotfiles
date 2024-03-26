@@ -93,7 +93,6 @@ require("lazy").setup({
   "jiangmiao/auto-pairs",
   "alvan/vim-closetag",
   'mg979/vim-visual-multi',
-  "preservim/nerdcommenter",
   {
     "wuelnerdotexe/vim-astro",
     config = function()
