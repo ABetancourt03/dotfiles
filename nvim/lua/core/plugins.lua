@@ -103,5 +103,6 @@ require("lazy").setup({
         },
       })
     end,
-  }
+  },
+  'gko/vim-coloresque'
 })
