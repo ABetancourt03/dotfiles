@@ -11,6 +11,10 @@ require("mason-lspconfig").setup({
     "emmet_ls",
     "jsonls",
     "pylsp",
+    "vuels",
+    "vimls",
+    "svelte",
+    "sqlls",
   },
 })
 
@@ -47,6 +51,10 @@ require("lspconfig").unocss.setup({})
 require("lspconfig").jsonls.setup({})
 require("lspconfig").emmet_ls.setup({})
 require("lspconfig").pylsp.setup({})
+require("lspconfig").vuels.setup({})
+require("lspconfig").vimls.setup({})
+require("lspconfig").svelte.setup({})
+require("lspconfig").sqlls.setup({})
 
 lspconfig.eslint.setup({
   on_attach = function(client, bufnr)
