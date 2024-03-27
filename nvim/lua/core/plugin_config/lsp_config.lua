@@ -10,6 +10,7 @@ require("mason-lspconfig").setup({
     "unocss",
     "emmet_ls",
     "jsonls",
+    "yamlls",
     "pylsp",
     "vuels",
     "vimls",
@@ -41,6 +42,27 @@ require("lspconfig").lua_ls.setup({
   },
 })
 
+require('lspconfig').jsonls.setup({
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  },
+})
+
+require('lspconfig').yamlls.setup({
+  settings = {
+    yaml = {
+      schemaStore = {
+        enable = false,
+        url = "",
+      },
+      schemas = require('schemastore').yaml.schemas(),
+    },
+  },
+})
+
 require("lspconfig").tsserver.setup({})
 require("lspconfig").tailwindcss.setup({})
 require("lspconfig").html.setup({})
@@ -48,7 +70,6 @@ require("lspconfig").astro.setup({})
 require("lspconfig").cssls.setup({})
 require("lspconfig").cssmodules_ls.setup({})
 require("lspconfig").unocss.setup({})
-require("lspconfig").jsonls.setup({})
 require("lspconfig").emmet_ls.setup({})
 require("lspconfig").pylsp.setup({})
 require("lspconfig").vuels.setup({})

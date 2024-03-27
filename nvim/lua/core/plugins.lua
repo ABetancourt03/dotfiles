@@ -1,6 +1,35 @@
 require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  "b0o/schemastore.nvim",
   "tpope/vim-commentary",
+  {
+    'kristijanhusak/vim-dadbod-ui',
+    dependencies = {
+      {
+        'tpope/vim-dadbod',
+        lazy = true
+      },
+      {
+        'kristijanhusak/vim-dadbod-completion',
+        ft = {
+          'sql',
+          'mysql',
+          'plsql',
+          'sqlite',
+        },
+        lazy = true
+      },
+    },
+    cmd = {
+      'DBUI',
+      'DBUIToggle',
+      'DBUIAddConnection',
+      'DBUIFindBuffer',
+    },
+    init = function()
+      vim.g.db_ui_use_nerd_fonts = 1
+    end,
+  },
   "mattn/emmet-vim",
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
