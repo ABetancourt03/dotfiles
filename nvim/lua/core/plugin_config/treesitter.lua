@@ -7,6 +7,7 @@ require 'nvim-treesitter.configs'.setup {
     "javascript",
     "typescript",
     "python",
+    "sql",
   },
 
   sync_install = false,

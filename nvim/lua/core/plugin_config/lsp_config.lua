@@ -16,6 +16,7 @@ require("mason-lspconfig").setup({
     "vimls",
     "svelte",
     "sqlls",
+    "sqls",
   },
 })
 
@@ -63,6 +64,24 @@ require('lspconfig').yamlls.setup({
   },
 })
 
+require("lspconfig").sqlls.setup({
+  cmd = { "sql-language-server", "up", "--method", "stdio" },
+  filetypes = {
+    "sql",
+    "mysql",
+    "sqlite"
+  },
+})
+
+require("lspconfig").sqls.setup({
+  cmd = { "sqls" },
+  filetypes = {
+    "sql",
+    "mysql",
+    "sqlite"
+  },
+})
+
 require("lspconfig").tsserver.setup({})
 require("lspconfig").tailwindcss.setup({})
 require("lspconfig").html.setup({})
@@ -75,7 +94,6 @@ require("lspconfig").pylsp.setup({})
 require("lspconfig").vuels.setup({})
 require("lspconfig").vimls.setup({})
 require("lspconfig").svelte.setup({})
-require("lspconfig").sqlls.setup({})
 
 lspconfig.eslint.setup({
   on_attach = function(client, bufnr)
