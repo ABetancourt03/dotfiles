@@ -1,5 +1,3 @@
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -22,11 +20,7 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export GIT_EDITOR=nvim
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#eval "$(starship init zsh)"
-
 alias c='clear'
-
-alias nvim=~/nvim-macos/bin/nvim
 
 alias zshrc='nvim ~/.zshrc'
 alias vimrc='cd ~/.config/nvim'
@@ -35,9 +29,7 @@ alias dotfiles='cd ~/dotfiles && c'
 alias dev='cd ~/Dev && c'
 
 alias v='nvim'
-alias py='python'
-
-alias brave="open /Applications/Brave\ Browser.app --args --no-sandbox"
+alias py='python3'
 
 # get node version of the project
 cd() {
@@ -57,3 +49,5 @@ PATH=~/.console-ninja/.bin:$PATH
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH=$PATH:/Users/angelo/.spicetify

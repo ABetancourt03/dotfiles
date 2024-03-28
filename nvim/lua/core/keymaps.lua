@@ -8,3 +8,6 @@ vim.keymap.set("n", "<S-Tab>", ":bprev<cr>")
 
 vim.keymap.set("n", "<leader>w", ":w<cr>")
 vim.keymap.set("n", "<leader>q", ":q<cr>")
+vim.keymap.set("n", "<leader>Q", ":q!<cr>")
+
+vim.keymap.set("n", "<leader>x", ":!node %<cr>")
