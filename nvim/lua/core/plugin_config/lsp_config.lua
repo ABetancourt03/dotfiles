@@ -82,6 +82,29 @@ require("lspconfig").sqls.setup({
 	},
 })
 
+lspconfig.pylsp.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		formatCommand = { "black" },
+		pylsp = {
+			plugins = {
+				pyls_flake8 = { enabled = false },
+				pylint = {
+					enabled = true,
+					args = { "--rcfile", "~/path/to/my/git/root/pyproject.toml" },
+				},
+				black = { enabled = true },
+				isort = { enabled = true },
+				pyls_mypy = {
+					enabled = true,
+					--live_mode = true,
+				},
+			},
+		},
+	},
+})
+
 require("lspconfig").tsserver.setup({})
 require("lspconfig").tailwindcss.setup({})
 require("lspconfig").html.setup({})
@@ -90,7 +113,6 @@ require("lspconfig").cssls.setup({})
 require("lspconfig").cssmodules_ls.setup({})
 require("lspconfig").unocss.setup({})
 require("lspconfig").emmet_ls.setup({})
-require("lspconfig").pylsp.setup({})
 require("lspconfig").vuels.setup({})
 require("lspconfig").vimls.setup({})
 require("lspconfig").svelte.setup({})
