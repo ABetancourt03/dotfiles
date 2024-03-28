@@ -11,12 +11,12 @@ require("mason-lspconfig").setup({
 		"emmet_ls",
 		"jsonls",
 		"yamlls",
-		"pylsp",
 		"vuels",
 		"vimls",
 		"svelte",
 		"sqlls",
 		"sqls",
+		"pyright",
 	},
 })
 
@@ -82,27 +82,22 @@ require("lspconfig").sqls.setup({
 	},
 })
 
-lspconfig.pylsp.setup({
+lspconfig.eslint.setup({
+	on_attach = function(client, bufnr)
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			buffer = bufnr,
+			command = "EslintFixAll",
+		})
+	end,
+})
+
+local on_attach = lspconfig.util.default_config.on_attach
+local capabilities = lspconfig.util.default_config.capabilities
+
+require("lspconfig").pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	settings = {
-		formatCommand = { "black" },
-		pylsp = {
-			plugins = {
-				pyls_flake8 = { enabled = false },
-				pylint = {
-					enabled = true,
-					args = { "--rcfile", "~/path/to/my/git/root/pyproject.toml" },
-				},
-				black = { enabled = true },
-				isort = { enabled = true },
-				pyls_mypy = {
-					enabled = true,
-					--live_mode = true,
-				},
-			},
-		},
-	},
+	filetypes = { "python" },
 })
 
 require("lspconfig").tsserver.setup({})
@@ -116,15 +111,6 @@ require("lspconfig").emmet_ls.setup({})
 require("lspconfig").vuels.setup({})
 require("lspconfig").vimls.setup({})
 require("lspconfig").svelte.setup({})
-
-lspconfig.eslint.setup({
-	on_attach = function(client, bufnr)
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			buffer = bufnr,
-			command = "EslintFixAll",
-		})
-	end,
-})
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),

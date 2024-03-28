@@ -53,7 +53,9 @@ require("lazy").setup({
 	"github/copilot.vim",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
+	{
+		"neovim/nvim-lspconfig",
+	},
 	{
 		"vinnymeller/swagger-preview.nvim",
 		run = "npm install -g swagger-ui-watcher",
@@ -104,6 +106,7 @@ require("lazy").setup({
 					json = { "prettier" },
 					css = { "prettier" },
 					astro = { "prettier" },
+					python = { "black" },
 				},
 				format_on_save = {
 					lsp_fallback = true,
