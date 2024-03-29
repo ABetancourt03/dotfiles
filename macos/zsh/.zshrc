@@ -3,7 +3,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="nanotech"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git
@@ -51,3 +51,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH=$PATH:/Users/angelo/.spicetify
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
