@@ -1,4 +1,7 @@
 vim.cmd("syntax on")
+vim.cmd("syntax enable")
+
+vim.cmd("set clipboard=unnamed")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
