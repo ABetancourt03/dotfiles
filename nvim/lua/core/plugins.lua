@@ -4,6 +4,11 @@ require("lazy").setup({
 		"dracula/vim",
 		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	},
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+	},
 	"b0o/schemastore.nvim",
 	"tpope/vim-commentary",
 	{
