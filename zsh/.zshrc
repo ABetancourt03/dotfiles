@@ -64,3 +64,8 @@ PATH=$HOME/ruby/gems/bin:$PATH
 GEM_HOME=$HOME/ruby
 GEM_PATH=$HOME/ruby/gems:/usr/lib/ruby/gems/1.8
 export PATH GEM_HOME GEM_PATH
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Turso
+export PATH="/home/h4cker/.turso:$PATH"
