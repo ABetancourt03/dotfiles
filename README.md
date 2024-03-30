@@ -12,6 +12,9 @@ git clone https://github.com/ABetancourt03/dotfiles.git && cd ./dotfiles && cp -
 git clone https://github.com/ABetancourt03/dotfiles.git
 ```
 
-```powershell
-explorer ./dotfiles
+## 🔧 Update Configs
+- Mac/Linux
+
+```sh
+cd ~/dotfiles && git pull && rm -rf ~/.config/nvim && cp -a ~/dotfiles/nvim ~/.configs/nvim && nvim ~/.config/nvim
 ```
