@@ -1,5 +1,5 @@
 require("catppuccin").setup({
-	flavour = "mocha",
+	flavour = "macchiato",
 	transparent_background = true,
 	styles = {
 		comments = { "italic" },
@@ -8,4 +8,4 @@ require("catppuccin").setup({
 
 vim.o.termguicolors = true
 vim.o.background = "dark"
-vim.cmd([[colorscheme dracula]])
+vim.cmd([[colorscheme catppuccin]])
