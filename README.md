@@ -13,6 +13,7 @@ git clone https://github.com/ABetancourt03/dotfiles.git
 ```
 
 ## 🔧 Update Configs
+### [neovim](https://neovim.io/)
 - Mac/Linux
 
 ```sh
