@@ -17,5 +17,5 @@ git clone https://github.com/ABetancourt03/dotfiles.git
 - Mac/Linux
 
 ```sh
-cd ~/dotfiles && git pull && rm -rf ~/.config/nvim && cp -a ~/dotfiles/nvim ~/.configs/nvim && nvim ~/.config/nvim
+cd ~/dotfiles && git pull && rm -rf ~/.config/nvim && cp -a ~/dotfiles/nvim ~/.config/nvim && nvim ~/.config/nvim
 ```
