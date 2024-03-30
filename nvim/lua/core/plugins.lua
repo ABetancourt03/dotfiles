@@ -1,5 +1,9 @@
 require("lazy").setup({
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{
+		"morhetz/gruvbox",
+		"dracula/vim",
+		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	},
 	"b0o/schemastore.nvim",
 	"tpope/vim-commentary",
 	{
@@ -33,8 +37,6 @@ require("lazy").setup({
 	"mattn/emmet-vim",
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
-	"morhetz/gruvbox",
-	"dracula/vim",
 	"nvim-lualine/lualine.nvim",
 	"nvim-treesitter/nvim-treesitter",
 	"vim-test/vim-test",
@@ -53,9 +55,7 @@ require("lazy").setup({
 	"github/copilot.vim",
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	{
-		"neovim/nvim-lspconfig",
-	},
+	"neovim/nvim-lspconfig",
 	{
 		"vinnymeller/swagger-preview.nvim",
 		run = "npm install -g swagger-ui-watcher",
