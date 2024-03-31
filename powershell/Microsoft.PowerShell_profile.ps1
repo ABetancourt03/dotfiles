@@ -1,7 +1,3 @@
-#Set-PSReadLineOption -PredictionViewStyle ListView
-
-# Initialize Oh-My-Posh and Terminal-Icons
-
 Invoke-Expression (&starship init powershell)
 
 Import-Module -Name Terminal-Icons
@@ -11,6 +7,7 @@ Import-Module -Name syntax-highlighting
 Set-Alias l ls
 Set-Alias ll ls
 Set-Alias c clear
+Set-Alias v nvim
 Set-Alias dev openDevDir
 Set-Alias dotfiles openDotfiles
 Set-Alias vimrc openNvimDir
