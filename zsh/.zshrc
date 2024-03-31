@@ -1,11 +1,13 @@
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="nanotech"
+# ZSH_THEME="nanotech"
+
+if [ "$TMUX" = "" ]; then tmux; fi
+
+eval "$(starship init zsh)"
 
 plugins=(
   git
@@ -27,7 +29,7 @@ export GIT_EDITOR=nvim
 alias c='clear'
 
 alias zshrc='nvim ~/.zshrc'
-alias vimrc='cd ~/.config/nvim'
+alias vimrc='cd ~/.config/nvim && c'
 alias dotfiles='cd ~/dotfiles && c'
 alias winhome='cd /mnt/c/Users/Angelo && c'
 
@@ -37,7 +39,7 @@ alias tilingoff='komorebic.exe stop'
 alias dev='cd ~/Dev && c'
 
 alias v='nvim'
-alias py='python'
+alias py='python3'
 
 # get node version of the project
 cd() {
@@ -48,7 +50,6 @@ cd() {
     nvm use
   fi
 }
-
 
 # pnpm
 export PNPM_HOME="/home/h4cker/.local/share/pnpm"
