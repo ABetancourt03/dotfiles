@@ -5,6 +5,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="nanotech"
 
+if [ "$TMUX" = "" ]; then tmux; fi
+
 eval "$(starship init zsh)"
 
 plugins=(
@@ -25,7 +27,7 @@ export GIT_EDITOR=nvim
 alias c='clear'
 
 alias zshrc='nvim ~/.zshrc'
-alias vimrc='cd ~/.config/nvim'
+alias vimrc='cd ~/.config/nvim && c'
 alias dotfiles='cd ~/dotfiles && c'
 
 alias dev='cd ~/Dev && c'
