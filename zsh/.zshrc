@@ -41,6 +41,11 @@ alias dev='cd ~/Dev && c'
 alias v='nvim'
 alias py='python3'
 
+alias androidstd='/opt/android-studio/bin/studio.sh'
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # get node version of the project
 cd() {
   builtin cd "$@"
