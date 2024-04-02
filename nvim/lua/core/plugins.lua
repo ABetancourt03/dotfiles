@@ -5,6 +5,9 @@ require("lazy").setup({
 		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	},
 	{
+		"xiyaowong/transparent.nvim",
+	},
+	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
