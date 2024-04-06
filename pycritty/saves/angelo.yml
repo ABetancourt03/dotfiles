@@ -1,0 +1,35 @@
+colors:
+  bright:
+    black: '#585b70'
+    blue: '#89b4fa'
+    cyan: '#94e2d5'
+    green: '#a6e3a1'
+    magenta: '#f5c2e7'
+    red: '#f38ba8'
+    white: '#bac2de'
+    yellow: '#f9e2af'
+  normal:
+    black: '#45475a'
+    blue: '#89b4fa'
+    cyan: '#94e2d5'
+    green: '#a6e3a1'
+    magenta: '#f5c2e7'
+    red: '#f38ba8'
+    white: '#bac2de'
+    yellow: '#f9e2af'
+  primary:
+    background: '#1e1e2e'
+    foreground: '#cdd6f4'
+font:
+  bold:
+    family: JetBrainsMono Nerd Font
+  italic:
+    family: JetBrainsMono Nerd Font
+  normal:
+    family: JetBrainsMono Nerd Font
+  size: 17.0
+window:
+  opacity: 0.95
+  padding:
+    x: 3
+    y: 3
