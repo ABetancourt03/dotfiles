@@ -17,6 +17,7 @@ require("mason-lspconfig").setup({
 		"sqlls",
 		"sqls",
 		"pyright",
+		"intelephense",
 	},
 })
 
@@ -100,6 +101,7 @@ require("lspconfig").pyright.setup({
 	filetypes = { "python" },
 })
 
+require("lspconfig").intelephense.setup({})
 require("lspconfig").tsserver.setup({})
 require("lspconfig").tailwindcss.setup({})
 require("lspconfig").html.setup({})
