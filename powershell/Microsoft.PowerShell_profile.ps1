@@ -1,7 +1,6 @@
 Invoke-Expression (&starship init powershell)
 
 Import-Module -Name Terminal-Icons
-Import-Module -Name syntax-highlighting
 
 # Aliases
 Set-Alias l ls
@@ -13,11 +12,11 @@ Set-Alias dotfiles openDotfiles
 Set-Alias vimrc openNvimDir
 
 function openDevDir {
-  Set-Location ~/Dev
+  Set-Location D:/Dev
 }
 
 function openDotfiles {
-  Set-Location E:/dotfiles
+  Set-Location D:/dotfiles
 }
 
 function openNvimDir {
