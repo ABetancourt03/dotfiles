@@ -2,9 +2,9 @@ Invoke-Expression (&starship init powershell)
 
 Import-Module -Name Terminal-Icons
 
-function openDevDir { Set-Location E:/Dev }
-function openDotfiles { Set-Location E:/dotfiles }
-function openNvimDir { Set-Location ~/AppData/Local/nvim }
+function openDevDir { Set-Location ~/Dev && c }
+function openDotfiles { Set-Location ~/dotfiles && c }
+function openNvimDir { Set-Location ~/AppData/Local/nvim && c }
 
 function gitStatus { git status }
 function gitLog { git log --all --graph --format=oneline }
@@ -27,7 +27,7 @@ function Change-Node-Version {
 Set-Alias l ls
 Set-Alias ll ls
 Set-Alias c clear
-Set-Alias v nvim
+Set-Alias vim nvim
 Set-Alias dev openDevDir
 Set-Alias dotfiles openDotfiles
 Set-Alias vimrc openNvimDir
@@ -40,3 +40,13 @@ Set-Alias ggpull gitPull
 Set-Alias ggpush gitPush
 
 New-Alias -Name cd -Value Change-Node-Version -Force -Option AllScope
+
+# Import the Chocolatey Profile that contains the necessary code to enable
+# tab-completions to function for `choco`.
+# Be aware that if you are missing these lines from your profile, tab completion
+# for `choco` will not function.
+# See https://ch0.co/tab-completion for details.
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
