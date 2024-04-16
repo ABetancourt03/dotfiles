@@ -1,6 +1,6 @@
 Invoke-Expression (&starship init powershell)
-
 Import-Module -Name Terminal-Icons
+winfetch
 
 function openDevDir { Set-Location ~/Dev && c }
 function openDotfiles { Set-Location ~/dotfiles && c }
@@ -23,6 +23,8 @@ function Change-Node-Version {
 	}
 }
 
+New-Alias -Name cd -Value Change-Node-Version -Force -Option AllScope
+
 # Aliases
 Set-Alias l ls
 Set-Alias ll ls
@@ -39,13 +41,6 @@ Set-Alias gaa gitAddAll
 Set-Alias ggpull gitPull
 Set-Alias ggpush gitPush
 
-New-Alias -Name cd -Value Change-Node-Version -Force -Option AllScope
-
-# Import the Chocolatey Profile that contains the necessary code to enable
-# tab-completions to function for `choco`.
-# Be aware that if you are missing these lines from your profile, tab completion
-# for `choco` will not function.
-# See https://ch0.co/tab-completion for details.
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
