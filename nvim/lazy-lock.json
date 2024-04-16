@@ -25,7 +25,7 @@
   "onedarkpro.nvim": { "branch": "main", "commit": "9cb77d936fd42c2c98becceb0f132df170d4eba0" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "presence.nvim": { "branch": "main", "commit": "87c857a56b7703f976d3a5ef15967d80508df6e6" },
-  "schemastore.nvim": { "branch": "main", "commit": "8b9002aae3c284e20020966c8b33242251b079e7" },
+  "schemastore.nvim": { "branch": "main", "commit": "cf82be744f4dba56d5d0c13d7fe429dd1d4c02e7" },
   "swagger-preview.nvim": { "branch": "master", "commit": "4e1db32e7934c57d653846d5d297f7ea9ddb6ee8" },
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
   "tokyonight.nvim": { "branch": "main", "commit": "9bf9ec53d5e87b025e2404069b71e7ebdc3a13e5" },
