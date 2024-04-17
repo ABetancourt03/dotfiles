@@ -1,8 +1,6 @@
 vim.cmd("syntax on")
 vim.cmd("syntax enable")
 
-vim.cmd("set clipboard=unnamed")
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -17,6 +15,8 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
+
+vim.opt.clipboard = "unnamedplus"
 
 vim.cmd([[ set noswapfile ]])
 vim.cmd([[ set termguicolors ]])
