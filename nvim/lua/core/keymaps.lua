@@ -12,3 +12,5 @@ vim.keymap.set("n", "<leader>Q", ":q!<cr>")
 
 vim.keymap.set("n", "<leader>x", ":!node %<cr>")
 vim.keymap.set("n", "<leader>z", ":!python3 %<cr>")
+
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
