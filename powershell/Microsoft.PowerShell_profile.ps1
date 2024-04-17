@@ -29,6 +29,7 @@ New-Alias -Name cd -Value Change-Node-Version -Force -Option AllScope
 Set-Alias l ls
 Set-Alias ll ls
 Set-Alias c clear
+Set-Alias v nvim
 Set-Alias vim nvim
 Set-Alias dev openDevDir
 Set-Alias dotfiles openDotfiles
