@@ -1,8 +1,0 @@
-{
-  "coc.preferences.formatOnSave": true,
-  "eslint.run": "onSave",
-  "eslint.format.enable": true,
-  "eslint.enable": true,
-  "eslint.autoFixOnSave": true,
-  "svelte.enable-ts-plugin": false
-}

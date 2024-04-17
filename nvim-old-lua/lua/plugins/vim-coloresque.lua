@@ -1,3 +1,0 @@
-return {
-  'gko/vim-coloresque'
-}
