@@ -41,11 +41,6 @@ alias dev='cd ~/Dev && c'
 alias v='nvim'
 alias py='python3'
 
-alias androidstd='/opt/android-studio/bin/studio.sh'
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 # get node version of the project
 cd() {
   builtin cd "$@"
@@ -75,3 +70,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Turso
 export PATH="/home/h4cker/.turso:$PATH"
+
+# bun completions
+[ -s "/home/h4cker/.bun/_bun" ] && source "/home/h4cker/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
