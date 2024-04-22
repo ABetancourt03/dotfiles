@@ -14,8 +14,6 @@ require("mason-lspconfig").setup({
 		"vuels",
 		"vimls",
 		"svelte",
-		"sqlls",
-		"sqls",
 		"pyright",
 		"intelephense",
 	},
@@ -62,24 +60,6 @@ require("lspconfig").yamlls.setup({
 			},
 			schemas = require("schemastore").yaml.schemas(),
 		},
-	},
-})
-
-require("lspconfig").sqlls.setup({
-	cmd = { "sql-language-server", "up", "--method", "stdio" },
-	filetypes = {
-		"sql",
-		"mysql",
-		"sqlite",
-	},
-})
-
-require("lspconfig").sqls.setup({
-	cmd = { "sqls" },
-	filetypes = {
-		"sql",
-		"mysql",
-		"sqlite",
 	},
 })
 
