@@ -34,6 +34,11 @@ vim.cmd("set relativenumber")
 
 vim.cmd("set matchpairs+=<:>")
 
+vim.cmd([[
+  nnoremap <Leader>> 10<C-w>>
+  nnoremap <Leader>< 10<C-w><
+]])
+
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
