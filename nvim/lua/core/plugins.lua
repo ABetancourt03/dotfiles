@@ -18,11 +18,6 @@ require("lazy").setup({
 		"startup-nvim/startup.nvim",
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	},
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
-	},
 	"b0o/schemastore.nvim",
 	"tpope/vim-commentary",
 	"mattn/emmet-vim",
