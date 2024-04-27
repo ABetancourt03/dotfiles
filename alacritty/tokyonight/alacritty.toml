@@ -1,0 +1,52 @@
+[env]
+TERM = "xterm-256color"
+
+[colors.primary]
+background = '#1A1B2C'
+foreground = '#C0CAF5'
+
+[colors.normal]
+black   = '#414868'
+red     = '#F7768E'
+green   = '#73DACA'
+yellow  = '#E0AF68'
+blue    = '#7AA2F7'
+magenta = '#BB9AF7'
+cyan    = '#7DCFFF'
+white   = '#414868'
+
+[colors.bright]
+black   = '#414868'
+red     = '#F7768E'
+green   = '#73DACA'
+yellow  = '#E0AF68'
+blue    = '#7AA2F7'
+magenta = '#BB9AF7'
+cyan    = '#7DCFFF'
+white   = '#414868'
+
+[font]
+size = 16
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+
+[window]
+opacity = 0.95
+
+[window.padding]
+x = 3
+y = 3
+
+[window.dimensions]
+columns = 140
+lines = 30
+
+[shell]
+program = "ubuntu"
