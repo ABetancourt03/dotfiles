@@ -1,6 +1,3 @@
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="nanotech"
@@ -22,58 +19,55 @@ alias guc="git reset --soft HEAD~"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 export GIT_EDITOR=nvim
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#eval "$(starship init zsh)"
 
 alias c='clear'
 
 alias zshrc='nvim ~/.zshrc'
 alias vimrc='cd ~/.config/nvim && c'
 alias dotfiles='cd ~/dotfiles && c'
-alias winhome='cd /mnt/c/Users/Angelo && c'
-
-alias tilingon='komorebic.exe start --whkd'
-alias tilingoff='komorebic.exe stop'
 
 alias dev='cd ~/Dev && c'
 
 alias v='nvim'
 alias py='python3'
 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # get node version of the project
 cd() {
   builtin cd "$@"
   if [[ -f .nvmrc ]]; then
-    nvm use > /dev/null
+    fnm use > /dev/null
     # Si quieres que te diga la versión
-    nvm use
+    fnm use
   fi
 }
 
+PATH=~/.console-ninja/.bin:$PATH
+
+# bun completions
+[ -s "/Users/angelo/.bun/_bun" ] && source "/Users/angelo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH=$PATH:/Users/angelo/.spicetify
+
 # pnpm
-export PNPM_HOME="/home/h4cker/.local/share/pnpm"
+export PNPM_HOME="/Users/angelo/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
-PATH=~/.console-ninja/.bin:$PATH
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-PATH=$HOME/ruby/gems/bin:$PATH
-GEM_HOME=$HOME/ruby
-GEM_PATH=$HOME/ruby/gems:/usr/lib/ruby/gems/1.8
-export PATH GEM_HOME GEM_PATH
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# Turso
-export PATH="/home/h4cker/.turso:$PATH"
-
-# bun completions
-[ -s "/home/h4cker/.bun/_bun" ] && source "/home/h4cker/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# fnm
+export PATH="/Users/angelo/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
