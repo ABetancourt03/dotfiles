@@ -4,17 +4,17 @@ format = """
 add_newline = true
 
 [directory]
-style = "bg:#1C4961 fg:white"
+style = "bg:#1C4961 fg:#ffffff"
 
 [git_branch]
 format = "[ $symbol$branch ]($style)"
-style = "bg:#2F79A1 fg:white"
+style = "bg:#2F79A1 fg:#ffffff"
 
 [git_status]
 format = "[ $all_status$ahead_behind ]($style)"
-style = "bg:#3A95C7 fg:white"
+style = "bg:#3A95C7 fg:#ffffff"
 
 [time]
 disabled = false
 format = "[ $time ]($style)"
-style = "bg:#40A9E0 fg:white"
+style = "bg:#40A9E0 fg:#ffffff"
