@@ -10,13 +10,11 @@ size = 20
 normal.family = "MesloLGS Nerd Font Mono"
 
 [window]
-opacity = 0.8
-decorations = "Buttonless"
-blur = true
+opacity = 1
 
 [window.padding]
-x = 0
-y = 0
+x = 5
+y = 10
 
 [window.dimensions]
 columns = 120
