@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -65,41 +58,3 @@ cd() {
     fnm use
   fi
 }
-
-# pnpm
-export PNPM_HOME="/home/h4cker/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-PATH=~/.console-ninja/.bin:$PATH
-
-PATH=$HOME/ruby/gems/bin:$PATH
-GEM_HOME=$HOME/ruby
-GEM_PATH=$HOME/ruby/gems:/usr/lib/ruby/gems/1.8
-export PATH GEM_HOME GEM_PATH
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# Turso
-export PATH="/home/h4cker/.turso:$PATH"
-
-# bun completions
-[ -s "/home/h4cker/.bun/_bun" ] && source "/home/h4cker/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# fnm
-export PATH="/home/h4cker/.local/share/fnm:$PATH"
-eval "`fnm env`"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
