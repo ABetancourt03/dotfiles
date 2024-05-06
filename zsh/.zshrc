@@ -21,19 +21,33 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export GIT_EDITOR=nvim
 
 alias c='clear'
+alias ls='eza --icons=always'
 
 alias zshrc='nvim ~/.zshrc'
 alias vimrc='cd ~/.config/nvim && c'
 alias dotfiles='cd ~/dotfiles && c'
+alias winhome='cd /mnt/c/Users/Angelo && c'
+
+alias tilingon='komorebic.exe start --whkd'
+alias tilingoff='komorebic.exe stop'
 
 alias dev='cd ~/Dev && c'
 
 alias v='nvim'
 alias py='python3'
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history 
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+# completion using arrow keys (based on history)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
 # get node version of the project
 cd() {
@@ -45,29 +59,37 @@ cd() {
   fi
 }
 
-PATH=~/.console-ninja/.bin:$PATH
-
-# bun completions
-[ -s "/Users/angelo/.bun/_bun" ] && source "/Users/angelo/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-export PATH=$PATH:/Users/angelo/.spicetify
-
 # pnpm
-export PNPM_HOME="/Users/angelo/Library/pnpm"
+export PNPM_HOME="/home/h4cker/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
+PATH=~/.console-ninja/.bin:$PATH
+
+PATH=$HOME/ruby/gems/bin:$PATH
+GEM_HOME=$HOME/ruby
+GEM_PATH=$HOME/ruby/gems:/usr/lib/ruby/gems/1.8
+export PATH GEM_HOME GEM_PATH
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Turso
+export PATH="/home/h4cker/.turso:$PATH"
+
+# bun completions
+[ -s "/home/h4cker/.bun/_bun" ] && source "/home/h4cker/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # fnm
-export PATH="/Users/angelo/Library/Application Support/fnm:$PATH"
+export PATH="/home/h4cker/.local/share/fnm:$PATH"
 eval "`fnm env`"
