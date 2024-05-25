@@ -1,7 +1,6 @@
 Invoke-Expression (&starship init powershell)
 Import-Module -Name Terminal-Icons
 
-function openZed { C:/Zed.exe }
 function openDevDir { Set-Location ~/Dev && c }
 function openDotfiles { Set-Location ~/dotfiles && c }
 function openNvimDir { Set-Location ~/AppData/Local/nvim && c }
@@ -21,7 +20,6 @@ Set-Alias vim nvim
 Set-Alias dev openDevDir
 Set-Alias dotfiles openDotfiles
 Set-Alias vimrc openNvimDir
-Set-Alias zed openZed
 
 # git
 Set-Alias gst gitStatus
