@@ -1,19 +1,12 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 export ZSH="$HOME/.oh-my-zsh"
+
+if [ "$TMUX" = "" ]; then tmux; fi
+
+# eval "$(starship init zsh)"
 
 # ZSH_THEME="nanotech"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# if [ "$TMUX" = "" ]; then tmux; fi
-
-# eval "$(starship init zsh)"
 
 plugins=(
   git
@@ -24,20 +17,15 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias guc="git reset --soft HEAD~"
-
 export FZF_DEFAULT_COMMAND='ag -g ""'
-
 export GIT_EDITOR=nvim
 
 alias c='clear'
 alias ls="eza --icons=always"
-
 alias zshrc='nvim ~/.zshrc'
 alias vimrc='cd ~/.config/nvim && c'
 alias dotfiles='cd ~/dotfiles && c'
-
 alias dev='cd ~/Dev && c'
-
 alias v='nvim'
 alias py='python3'
 
@@ -95,5 +83,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH="/Users/angelo/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
