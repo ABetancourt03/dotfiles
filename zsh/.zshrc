@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then tmux; fi
 
 # eval "$(starship init zsh)"
 
@@ -15,24 +15,16 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias guc="git reset --soft HEAD~"
-
 export FZF_DEFAULT_COMMAND='ag -g ""'
-
 export GIT_EDITOR=nvim
 
 alias c='clear'
 alias ls='eza --icons=always'
-
 alias zshrc='nvim ~/.zshrc'
 alias vimrc='cd ~/.config/nvim && c'
 alias dotfiles='cd ~/dotfiles && c'
 alias winhome='cd /mnt/c/Users/Angelo && c'
-
-alias tilingon='komorebic.exe start --whkd'
-alias tilingoff='komorebic.exe stop'
-
 alias dev='cd ~/Dev && c'
-
 alias v='nvim'
 alias py='python3'
 
@@ -58,3 +50,20 @@ cd() {
     fnm use
   fi
 }
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# fnm
+export PATH="/home/h4cker/.local/share/fnm:$PATH"
+eval "`fnm env`"
+
+PATH=~/.console-ninja/.bin:$PATH
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
