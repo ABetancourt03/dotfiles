@@ -55,10 +55,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# fnm
-export PATH="/home/h4cker/.local/share/fnm:$PATH"
-eval "`fnm env`"
-
 PATH=~/.console-ninja/.bin:$PATH
 
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -67,3 +63,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# fnm
+export PATH="$HOME/.local/share/fnm:$PATH"
+eval "`fnm env`"
