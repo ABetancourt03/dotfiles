@@ -1,24 +1,34 @@
 {
   "$help": "https://aka.ms/terminal-documentation",
-  "$schema": "https://aka.ms/terminal-profiles-schema-preview",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions": [
+    {
+      "command": "unbound",
+      "id": "User.copy.644BA8F2",
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": "unbound",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": "unbound",
+      "keys": "alt+shift+d"
+    },
     {
       "command": {
         "action": "copy",
         "singleLine": false
       },
-      "id": "User.copy.644BA8F2",
-      "keys": "ctrl+c"
+      "id": "User.copy.644BA8F2"
     },
     {
       "command": "paste",
-      "id": "User.paste",
-      "keys": "ctrl+v"
-    },
-    {
-      "command": "find",
-      "id": "User.find",
-      "keys": "ctrl+shift+f"
+      "id": "User.paste"
     },
     {
       "command": {
@@ -26,8 +36,11 @@
         "split": "auto",
         "splitMode": "duplicate"
       },
-      "id": "User.splitPane.A6751878",
-      "keys": "alt+shift+d"
+      "id": "User.splitPane.A6751878"
+    },
+    {
+      "command": "find",
+      "id": "User.find"
     }
   ],
   "copyFormatting": "none",
@@ -42,14 +55,16 @@
   ],
   "profiles": {
     "defaults": {
+      "backgroundImage": null,
+      "backgroundImageOpacity": 0.1,
       "bellStyle": "none",
-      "colorScheme": "coolnight",
-      "cursorShape": "filledBox",
+      "colorScheme": "SynthWave 84",
+      "cursorShape": "bar",
       "font": {
-        "face": "MesloLGS Nerd Font Mono",
-        "size": 18
+        "face": "Hack Nerd Font Propo",
+        "size": 14
       },
-      "opacity": 95,
+      "opacity": 60,
       "padding": "5",
       "scrollbarState": "hidden",
       "useAcrylic": true
@@ -79,21 +94,6 @@
         "icon": "D:\\ARCHIVOS ANGELO\\Im\u00e1genes\\windows-256.png",
         "name": "PowerShell",
         "source": "Windows.Terminal.PowershellCore"
-      },
-      {
-        "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-        "hidden": false,
-        "icon": "D:\\ARCHIVOS ANGELO\\Im\u00e1genes\\ubuntu-100.png",
-        "name": "Ubuntu",
-        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
-      },
-      {
-        "commandline": "arch.exe",
-        "guid": "{1ab21497-2335-45a6-be39-649a4e40a924}",
-        "hidden": false,
-        "icon": "D:\\ARCHIVOS ANGELO\\Im\u00e1genes\\arch-linux-256.png",
-        "name": "Arch",
-        "tabTitle": "Arch"
       }
     ]
   },
@@ -120,6 +120,29 @@
       "selectionBackground": "#585B70",
       "white": "#BAC2DE",
       "yellow": "#F9E2AF"
+    },
+    {
+      "background": "#262335",
+      "black": "#000000",
+      "blue": "#03EDF9",
+      "brightBlack": "#888888",
+      "brightBlue": "#03EDF9",
+      "brightCyan": "#03EDF9",
+      "brightGreen": "#72F1B8",
+      "brightPurple": "#FF7EDB",
+      "brightRed": "#FE4450",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#FEDE5D",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#03EDF9",
+      "foreground": "#FFFFFF",
+      "green": "#72F1B8",
+      "name": "SynthWave 84",
+      "purple": "#FF7EDB",
+      "red": "#FE4450",
+      "selectionBackground": "#FFFFFF",
+      "white": "#FFFFFF",
+      "yellow": "#F97E72"
     },
     {
       "background": "#1A1B2C",
