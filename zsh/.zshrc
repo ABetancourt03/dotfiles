@@ -1,10 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="nanotech"
 
-if [ "$TMUX" = "" ]; then tmux; fi
+#if [ "$TMUX" = "" ]; then tmux; fi
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 plugins=(
   git
@@ -41,6 +41,8 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # get node version of the project
 cd() {
   builtin cd "$@"
@@ -51,19 +53,9 @@ cd() {
   fi
 }
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-PATH=~/.console-ninja/.bin:$PATH
-
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # fnm
 export PATH="$HOME/.local/share/fnm:$PATH"
 eval "`fnm env`"
+
+# temurin-jdk
+export PATH="$HOME/.jdks/temurin-21.0.7/bin:$PATH"
