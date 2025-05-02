@@ -1,0 +1,23 @@
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 15
+normal.family = "MesloLGS Nerd Font Propo"
+
+[window]
+opacity = 0.9
+
+[window.padding]
+x = 5
+y = 5
+
+[window.dimensions]
+columns = 100
+lines = 25
+
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+]
