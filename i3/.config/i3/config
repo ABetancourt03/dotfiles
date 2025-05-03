@@ -1,12 +1,11 @@
 set $mod Mod1
 bindsym $mod+space exec rofi -show combi
 
-font pango:Meslo LGS Nerd Font 14
+font pango:JetBrainsMono Nerd Font 14
 
 exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id setxkbmap es
-exec xrandr --output Virtual-1 --mode 1920x1080
-exec_always feh --bg-scale ~/dotfiles/wallpapers/catppuccin/DWcGiAG.png
+exec_always feh --bg-scale ~/dotfiles/wallpapers/tokyo-night/cafe-at-night_00_3840x2160.png
 exec polybar
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
