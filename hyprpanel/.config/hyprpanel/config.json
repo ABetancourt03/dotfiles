@@ -1,0 +1,15 @@
+{
+  "theme.font.weight": 500,
+  "theme.font.size": "1rem",
+  "theme.font.name": "JetBrainsMono Nerd Font Propo",
+  "theme.font.style": "normal",
+  "theme.font.label": "JetBrainsMono Nerd Font Propo",
+  "theme.bar.menus.enableShadow": false,
+  "theme.bar.floating": true,
+  "theme.bar.buttons.enableBorders": false,
+  "menus.media.hideAuthor": false,
+  "menus.media.hideAlbum": false,
+  "menus.media.displayTimeTooltip": false,
+  "menus.volume.raiseMaximumVolume": true,
+  "menus.clock.weather.location": "6023"
+}
