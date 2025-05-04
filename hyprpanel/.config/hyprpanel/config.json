@@ -14,5 +14,9 @@
   "menus.clock.weather.location": "6023",
   "menus.dashboard.powermenu.avatar.image": "/home/deus/Pictures/abetancourt03-avatar.png",
   "theme.tooltip.scaling": 90,
-  "theme.bar.menus.popover.scaling": 80
+  "theme.bar.menus.popover.scaling": 80,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.showWsIcons": false
 }
