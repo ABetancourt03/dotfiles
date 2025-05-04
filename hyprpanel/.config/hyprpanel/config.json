@@ -11,5 +11,6 @@
   "menus.media.hideAlbum": false,
   "menus.media.displayTimeTooltip": false,
   "menus.volume.raiseMaximumVolume": true,
-  "menus.clock.weather.location": "6023"
+  "menus.clock.weather.location": "6023",
+  "menus.dashboard.powermenu.avatar.image": "/home/deus/Pictures/abetancourt03-avatar.png"
 }
