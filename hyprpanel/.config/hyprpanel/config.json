@@ -12,5 +12,7 @@
   "menus.media.displayTimeTooltip": false,
   "menus.volume.raiseMaximumVolume": true,
   "menus.clock.weather.location": "6023",
-  "menus.dashboard.powermenu.avatar.image": "/home/deus/Pictures/abetancourt03-avatar.png"
+  "menus.dashboard.powermenu.avatar.image": "/home/deus/Pictures/abetancourt03-avatar.png",
+  "theme.tooltip.scaling": 90,
+  "theme.bar.menus.popover.scaling": 80
 }
