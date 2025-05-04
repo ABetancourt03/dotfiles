@@ -18,5 +18,7 @@
   "bar.workspaces.show_icons": false,
   "bar.workspaces.show_numbered": true,
   "bar.workspaces.workspaceMask": false,
-  "bar.workspaces.showWsIcons": false
+  "bar.workspaces.showWsIcons": false,
+  "theme.bar.border.location": "none",
+  "theme.bar.border.width": "0.15em"
 }
