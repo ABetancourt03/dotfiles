@@ -1,31 +1,7 @@
 {
   "$help": "https://aka.ms/terminal-documentation",
   "$schema": "https://aka.ms/terminal-profiles-schema",
-  "actions": [
-    {
-      "command": {
-        "action": "copy",
-        "singleLine": false
-      },
-      "id": "User.copy.644BA8F2"
-    },
-    {
-      "command": "paste",
-      "id": "User.paste"
-    },
-    {
-      "command": "find",
-      "id": "User.find"
-    },
-    {
-      "command": {
-        "action": "splitPane",
-        "split": "auto",
-        "splitMode": "duplicate"
-      },
-      "id": "User.splitPane.A6751878"
-    }
-  ],
+  "actions": [],
   "copyFormatting": "none",
   "copyOnSelect": false,
   "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -37,18 +13,18 @@
     },
     {
       "id": null,
-      "keys": "ctrl+v"
+      "keys": "ctrl+shift+f"
     },
     {
       "id": null,
-      "keys": "ctrl+shift+f"
+      "keys": "ctrl+v"
     },
     {
       "id": null,
       "keys": "alt+shift+d"
     }
   ],
-  "launchMode": "maximized",
+  "launchMode": "default",
   "newTabMenu": [
     {
       "type": "remainingProfiles"
@@ -62,7 +38,7 @@
       "colorScheme": "Catppuccin Mocha",
       "cursorShape": "filledBox",
       "font": {
-        "face": "CaskaydiaCove Nerd Font",
+        "face": "JetBrainsMono Nerd Font Propo",
         "size": 14
       },
       "opacity": 50,
