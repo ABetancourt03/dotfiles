@@ -36,9 +36,9 @@
       "backgroundImageOpacity": 0.1,
       "bellStyle": "none",
       "colorScheme": "Catppuccin Mocha",
-      "cursorShape": "filledBox",
+      "cursorShape": "bar",
       "font": {
-        "face": "JetBrainsMono Nerd Font Propo",
+        "face": "Hack Nerd Font Propo",
         "size": 14
       },
       "opacity": 50,
