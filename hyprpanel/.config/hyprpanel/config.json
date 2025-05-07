@@ -20,5 +20,12 @@
   "bar.workspaces.workspaceMask": false,
   "bar.workspaces.showWsIcons": false,
   "theme.bar.border.location": "none",
-  "theme.bar.border.width": "0.15em"
+  "theme.bar.border.width": "0.15em",
+  "bar.volume.label": false,
+  "bar.network.label": false,
+  "bar.bluetooth.label": false,
+  "bar.battery.label": false,
+  "bar.clock.format": "%a %b %d  %I:%M %p",
+  "bar.notifications.show_total": true,
+  "bar.notifications.hideCountWhenZero": true
 }
