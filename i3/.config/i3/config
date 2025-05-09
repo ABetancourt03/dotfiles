@@ -6,7 +6,7 @@ font pango:JetBrainsMono Nerd Font 14
 exec --no-startup-id picom
 exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id setxkbmap es
-exec_always feh --bg-scale ~/dotfiles/wallpapers/tokyo-night/cafe-at-night_00_3840x2160.png
+exec_always feh --bg-scale ~/dotfiles/wallpapers/catppuccin/catppuccin_tree.png
 exec polybar
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -160,8 +160,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Hide titlebar
-default_border pixel 3
-default_floating_border pixel 3
+default_border pixel 2
+default_floating_border pixel 2
 
 # Color shemes for windows 
 set $bgcolor    #cba6f7
