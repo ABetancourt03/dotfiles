@@ -1,7 +1,7 @@
 set $mod Mod1
-bindsym $mod+space exec rofi -show combi
+bindsym $mod+space exec rofi -show drun
 
-font pango:JetBrainsMono Nerd Font 14
+font pango:Hack Nerd Font 14
 
 exec --no-startup-id picom
 exec --no-startup-id dex --autostart --environment i3
