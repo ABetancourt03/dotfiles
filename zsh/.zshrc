@@ -15,6 +15,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 alias guc="git reset --soft HEAD~"
+alias glog="git log --all --graph --format=oneline"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export GIT_EDITOR=nvim
 
@@ -23,10 +24,10 @@ alias ls='eza --icons=always'
 alias zshrc='nvim ~/.zshrc'
 alias vimrc='cd ~/.config/nvim && c'
 alias dotfiles='cd ~/dotfiles && c'
-alias winhome='cd /mnt/c/Users/Angelo && c'
 alias dev='cd ~/Dev && c'
 alias v='nvim'
 alias py='python3'
+alias lzg='lazygit'
 
 # history setup
 HISTFILE=$HOME/.zhistory
