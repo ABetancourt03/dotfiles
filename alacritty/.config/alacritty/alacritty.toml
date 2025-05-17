@@ -3,11 +3,11 @@
 TERM = "xterm-256color"
 
 [font]
-size = 15
-normal.family = "JetBrainsMono Nerd Font Propo"
+size = 13
+normal.family = "CaskaydiaCove Nerd Font Propo"
 
 [window]
-opacity = 0.9
+opacity = 1
 
 [window.padding]
 x = 5
