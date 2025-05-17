@@ -1,5 +1,4 @@
 Invoke-Expression (&starship init powershell)
-Import-Module -Name Terminal-Icons
 Import-Module -Name PSReadLine
 
 function openDevDir { Set-Location ~/Dev && c }
