@@ -1,4 +1,4 @@
 theme = catppuccin-mocha
-font-family = CascaydiaCove Nerd Font Propo
-font-size = 14
+font-family = CascaydiaCove Nerd Font
+font-size = 16
 gtk-titlebar = false
