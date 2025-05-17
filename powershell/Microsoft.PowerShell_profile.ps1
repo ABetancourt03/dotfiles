@@ -16,9 +16,9 @@ function openIntellijIdea ($location) {
   C:\Program` Files\JetBrains\IntelliJ` IDEA` Community` Edition` 2024.3.4.1\bin\idea64.exe $location
 }
 
-function ezaLs { eza --icons=always }
-function ezaL { eza --icons=always -la }
-function ezaLl { eza --icons=always -ll }
+function ezaLs ($location) { eza --icons=always $location }
+function ezaL ($location) { eza --icons=always -la $location }
+function ezaLl ($location) { eza --icons=always -ll $location }
 
 # ----- Aliases -----
 
