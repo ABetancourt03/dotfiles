@@ -36,15 +36,15 @@
       "backgroundImageOpacity": 0.1,
       "bellStyle": "none",
       "colorScheme": "Catppuccin Mocha",
-      "cursorShape": "bar",
+      "cursorShape": "filledBox",
       "font": {
-        "face": "Hack Nerd Font Propo",
-        "size": 14
+        "face": "CaskaydiaCove Nerd Font",
+        "size": 16
       },
-      "opacity": 50,
+      "opacity": 100,
       "padding": "5",
       "scrollbarState": "hidden",
-      "useAcrylic": true
+      "useAcrylic": false
     },
     "list": [
       {
