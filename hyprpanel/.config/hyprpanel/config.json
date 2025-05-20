@@ -1,9 +1,9 @@
 {
   "theme.font.weight": 500,
   "theme.font.size": "1rem",
-  "theme.font.name": "JetBrainsMono Nerd Font Propo",
+  "theme.font.name": "CaskaydiaCove Nerd Font",
   "theme.font.style": "normal",
-  "theme.font.label": "JetBrainsMono Nerd Font Propo",
+  "theme.font.label": "CaskaydiaCove Nerd Font",
   "theme.bar.menus.enableShadow": false,
   "theme.bar.floating": true,
   "theme.bar.buttons.enableBorders": false,
