@@ -3,8 +3,8 @@
 TERM = "xterm-256color"
 
 [font]
-size = 13
-normal.family = "CaskaydiaCove Nerd Font Propo"
+size = 14
+normal.family = "CaskaydiaCove Nerd Font"
 
 [window]
 opacity = 1
