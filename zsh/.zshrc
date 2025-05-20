@@ -1,7 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-# ZSH_THEME="nanotech"
-
 #if [ "$TMUX" = "" ]; then tmux; fi
 
 eval "$(starship init zsh)"
@@ -28,6 +26,7 @@ alias dev='cd ~/Dev && c'
 alias v='nvim'
 alias py='python3'
 alias lzg='lazygit'
+alias ff='neofetch'
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -42,8 +41,6 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # get node version of the project
 cd() {
   builtin cd "$@"
@@ -57,6 +54,3 @@ cd() {
 # fnm
 export PATH="$HOME/.local/share/fnm:$PATH"
 eval "`fnm env`"
-
-# temurin-jdk
-export PATH="$HOME/.jdks/temurin-21.0.7/bin:$PATH"
