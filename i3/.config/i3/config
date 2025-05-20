@@ -9,6 +9,7 @@ exec_always --no-startup-id setxkbmap es
 exec_always feh --bg-scale ~/dotfiles/wallpapers/catppuccin/forrest.png
 exec polybar
 
+exec --no-startup-id xset s off -dpms
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
