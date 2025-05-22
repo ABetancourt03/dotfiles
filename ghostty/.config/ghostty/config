@@ -1,4 +1,6 @@
 theme = catppuccin-mocha
 font-family = CaskaydiaCove Nerd Font
 font-size = 14
-gtk-titlebar = true
+gtk-titlebar = false
+background-opacity = 0.5
+background-blur = true
