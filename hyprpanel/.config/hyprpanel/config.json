@@ -16,7 +16,7 @@
   "theme.tooltip.scaling": 90,
   "theme.bar.menus.popover.scaling": 80,
   "bar.workspaces.show_icons": false,
-  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.show_numbered": false,
   "bar.workspaces.workspaceMask": false,
   "bar.workspaces.showWsIcons": false,
   "theme.bar.border.location": "none",
