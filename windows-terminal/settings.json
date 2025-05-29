@@ -2,6 +2,7 @@
   "$help": "https://aka.ms/terminal-documentation",
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions": [],
+  "alwaysShowTabs": true,
   "copyFormatting": "none",
   "copyOnSelect": false,
   "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -41,10 +42,10 @@
         "face": "CaskaydiaCove Nerd Font",
         "size": 14
       },
-      "opacity": 100,
+      "opacity": 80,
       "padding": "5",
       "scrollbarState": "hidden",
-      "useAcrylic": false
+      "useAcrylic": true
     },
     "list": [
       {
@@ -74,6 +75,7 @@
       }
     ]
   },
+  "rendering.graphicsAPI": "direct2d",
   "schemes": [
     {
       "background": "#1E1E2E",
@@ -192,7 +194,8 @@
     }
   ],
   "showTabsInTitlebar": true,
+  "showTerminalTitleInTitlebar": true,
   "theme": "dark",
   "themes": [],
-  "useAcrylicInTabRow": true
+  "useAcrylicInTabRow": false
 }
