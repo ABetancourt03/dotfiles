@@ -27,5 +27,8 @@
   "bar.battery.label": false,
   "bar.clock.format": "%a %b %d  %I:%M %p",
   "bar.notifications.show_total": true,
-  "bar.notifications.hideCountWhenZero": true
+  "bar.notifications.hideCountWhenZero": true,
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }
