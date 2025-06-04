@@ -4,3 +4,5 @@ font-size = 14
 gtk-titlebar = false
 background-opacity = 0.8
 background-blur = true
+window-width = 120
+window-height = 30
