@@ -16,7 +16,7 @@
   "theme.tooltip.scaling": 90,
   "theme.bar.menus.popover.scaling": 80,
   "bar.workspaces.show_icons": false,
-  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.show_numbered": true,
   "bar.workspaces.workspaceMask": false,
   "bar.workspaces.showWsIcons": false,
   "theme.bar.border.location": "none",
@@ -30,5 +30,12 @@
   "bar.notifications.hideCountWhenZero": true,
   "bar.customModules.storage.paths": [
     "/"
-  ]
+  ],
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.monitorSpecific": true,
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.4em",
+  "theme.bar.buttons.workspaces.numbered_inactive_padding": "0.4em",
+  "theme.bar.buttons.windowtitle.enableBorder": false
 }
