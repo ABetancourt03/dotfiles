@@ -93,6 +93,7 @@ Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 EndeavourOS = " "
+CachyOS = "󰣇"
 
 [username]
 show_always = true
