@@ -85,7 +85,6 @@
     },
     {
       "type": "gpu",
-      "format": "{name}",
       "key": " ├ 󰢮 ",
       "keyColor": "33",
     },
