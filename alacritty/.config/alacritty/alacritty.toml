@@ -7,7 +7,7 @@ size = 14
 normal.family = "CaskaydiaCove Nerd Font"
 
 [window]
-opacity = 1
+opacity = 0.8
 
 [window.padding]
 x = 5
