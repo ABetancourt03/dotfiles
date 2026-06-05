@@ -1,23 +1,23 @@
+general.import = [ "~/.config/alacritty/themes/themes/catppuccin_mocha.toml" ]
 
 [env]
 TERM = "xterm-256color"
 
+[terminal]
+osc52 = "CopyPaste"
+
 [font]
-size = 14
-normal.family = "CaskaydiaCove Nerd Font"
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size = 13
 
 [window]
-opacity = 0.8
+padding.x = 5
+padding.y = 5
 
-[window.padding]
-x = 5
-y = 5
+opacity = 0.95
 
-[window.dimensions]
-columns = 100
-lines = 25
+dimensions.columns = 100
+dimensions.lines = 25
 
-[general]
-import = [
-  "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
-]
