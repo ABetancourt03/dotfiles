@@ -16,7 +16,7 @@ size = 13
 padding.x = 5
 padding.y = 5
 
-opacity = 0.95
+opacity = 0.8
 
 dimensions.columns = 100
 dimensions.lines = 25
