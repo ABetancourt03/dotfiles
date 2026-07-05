@@ -2,8 +2,8 @@
 palette = "catppuccin_mocha"
 
 # Setups
-format="$directory$git_branch$character"
-right_format = """$git_status$cmd_duration"""
+format="$directory $character"
+right_format = """$git_branch $git_status"""
 add_newline = true
 
 # Other languages configurations:
@@ -30,24 +30,24 @@ error_symbol = "[](pink)"
 vicmd_symbol = "[](peach)"
 
 [directory]
-format = "[]($style)[ ](bg:surface1 fg:mauve)[$path](bg:surface1 fg:text bold)[ ]($style)"
+format = "[ ](fg:mauve)[$path](fg:text bold)"
 style = "bg:none fg:surface1"
 truncation_length = 3
 truncate_to_repo=false
 
 [git_branch]
-format = "[]($style)[[ ](bg:surface1 fg:green bold)$branch](bg:surface1 fg:text)[ ]($style)"
+format = "[[ ](fg:green bold)$branch](fg:text)"
 style = "bg:none fg:surface1"
 
 [git_status]
 # $all status$ahead_behind
-format = "[]($style)[$all_status$ahead_behind](bg:surface1 fg:yellow)[ ]($style)"
+format = "[$all_status$ahead_behind](fg:yellow)"
 style = "bg:none fg:surface1"
 conflicted = " "
 ahead =	" ${count} "
 behind = " ${count} "
 diverged = " ${ahead_count} ${behind_count} "
-up_to_date = "[ ](bg:surface1 fg:green)"
+up_to_date = "[ ](fg:green) "
 untracked = "󰋗 ${count} "
 stashed = " "
 modified = "󰛿 !${count} "
