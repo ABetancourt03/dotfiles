@@ -5,7 +5,7 @@
   min-height: 0;
   min-width: 0;
   font-family: "CaskaydiaCove Nerd Font";
-  font-size: 13px;
+  font-size: 14px;
 }
 
 window#waybar {
@@ -36,7 +36,7 @@ window#waybar {
 
 /* Workspace buttons */
 #workspaces label {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #workspaces button {
