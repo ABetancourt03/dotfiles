@@ -162,15 +162,19 @@ window#waybar {
 }
 
 #cpu {
-  color: @pink;
-}
-
-#pulseaudio {
   color: @sapphire;
 }
 
+#custom-gpu {
+  color: @red
+}
+
+#pulseaudio {
+  color: @blue;
+}
+
 #bluetooth {
-  color: @muted;
+  color: @blue;
 }
 
 #bluetooth.connected {
