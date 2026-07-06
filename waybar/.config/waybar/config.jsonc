@@ -9,8 +9,8 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "clock",
     "custom/weather",
+    "clock",
     "custom/update",
     "custom/voxtype",
     "custom/screenrecording-indicator",
@@ -72,7 +72,7 @@
   },
   "cpu": {
     "interval": 5,
-    "format": " 󰍛  {usage}%",
+    "format": "   {usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
     "on-click-right": "alacritty"
   },
