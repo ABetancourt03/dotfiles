@@ -77,7 +77,7 @@
     "on-click-right": "alacritty"
   },
   "clock": {
-    "format": "{:L%A, %H:%M %m/%d/%Y}",
+    "format": "{:L%B %d, %A %I:%M %p}",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
