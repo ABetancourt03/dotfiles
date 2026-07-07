@@ -105,6 +105,7 @@ window#waybar {
 
 #clock {
   color: @blue;
+  font-size: 13px;
 }
 
 #custom-voxtype {
@@ -159,14 +160,17 @@ window#waybar {
 /* Right modules - colors */
 #memory {
   color: @mauve;
+  font-size: 13px;
 }
 
 #cpu {
   color: @sapphire;
+  font-size: 13px;
 }
 
 #custom-gpu {
-  color: @red
+  color: @red;
+  font-size: 13px;
 }
 
 #pulseaudio {
