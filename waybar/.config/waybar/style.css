@@ -20,18 +20,19 @@ window#waybar {
 .modules-left,
 .modules-right {
   background-color: transparent;
-  margin: 4px 8px 4px 8px;
+  margin: 0px 6px 0px 4px;
 }
 
 .modules-left>*,
 .modules-right>* {
   margin: 0 4px;
+  padding: 0px 8px;
 }
 
 .modules-center {
   background-color: transparent;
   margin: 4px 8px 4px 8px;
-  padding: 2px 8px;
+  padding: 0px 8px;
 }
 
 /* Workspace buttons */
