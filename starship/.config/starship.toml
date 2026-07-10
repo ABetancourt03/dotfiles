@@ -2,45 +2,32 @@
 palette = "catppuccin_mocha"
 
 # Setups
-format="$directory $character"
-right_format = """$git_branch $git_status"""
+format="""[╭─](fg:black) $directory $git_branch $git_status
+[╰─](fg:black)$character
+"""
+right_format = """$cmd_duration"""
 add_newline = true
-
-# Other languages configurations:
-c.disabled = true
-cmake.disabled = true
-haskell.disabled = true
-python.disabled = true
-ruby.disabled = true
-rust.disabled = true
-perl.disabled = true
-package.disabled = true
-lua.disabled = true
-nodejs.disabled = false
-java.disabled = true
-golang.disabled = true
 
 [conda]
 format = ' [$symbol$environment](dimmed green) '
 
 # Prompt symbols 
 [character]
-success_symbol = "[](green bold)"
-error_symbol = "[](pink)"
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
 vicmd_symbol = "[](peach)"
 
 [directory]
-format = "[ ](fg:mauve)[$path](fg:text bold)"
-style = "bg:none fg:surface1"
+format = "[ ](fg:blue) [$path](fg:blue bold)"
+style = "fg:text"
 truncation_length = 3
 truncate_to_repo=false
 
 [git_branch]
-format = "[[ ](fg:green bold)$branch](fg:text)"
+format = "[[ ](fg:green bold)$branch](fg:green)"
 style = "bg:none fg:surface1"
 
 [git_status]
-# $all status$ahead_behind
 format = "[$all_status$ahead_behind](fg:yellow)"
 style = "bg:none fg:surface1"
 conflicted = " "
@@ -56,9 +43,8 @@ renamed = "󱍸 »${count} "
 deleted = "󰍶 ${count} "
 
 [cmd_duration]
-min_time = 1
-# duration & style 
-format = "[]($style)[(bg:surface1 fg:flamingo bold)$duration](bg:surface1 fg:text)[ ]($style)"
+min_time = 0
+format = "[(fg:text bold)$duration](fg:text)"
 disabled = false
 style = "bg:none fg:surface1"
 
