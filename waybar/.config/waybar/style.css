@@ -14,7 +14,7 @@ window#waybar {
 
 #waybar>box {
   background: rgba(24, 24, 37, 0.4);
-  margin: 5px 5px 0;
+  /* margin: 5px 5px 0; */
 }
 
 .modules-left,
