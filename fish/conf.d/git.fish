@@ -1,0 +1,5 @@
+alias gst='git status'
+alias glog='git log --all --graph --format=oneline'
+alias gaa='git add -A'
+alias ggpull='git pull'
+alias ggpush='git push'
