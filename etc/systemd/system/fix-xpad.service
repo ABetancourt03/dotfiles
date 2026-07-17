@@ -1,0 +1,12 @@
+[Unit]
+Description=Reiniciar modulo xpad para activar el mando de Xbox 360
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/modprobe -r xpad
+ExecStartPost=/usr/bin/modprobe xpad
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
