@@ -54,12 +54,6 @@ return {
 				virtual_text = true,
 				underline = true,
 			})
-
-			vim.api.nvim_create_autocmd("BufWritePost", {
-				callback = function()
-					vim.lsp.buf.format({ async = false })
-				end,
-			})
 		end,
-	}
+	},
 }
