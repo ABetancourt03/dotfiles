@@ -28,5 +28,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.cmd("let g:astro_typescript = 'enable'")
 vim.cmd("set matchpairs+=<:>")
