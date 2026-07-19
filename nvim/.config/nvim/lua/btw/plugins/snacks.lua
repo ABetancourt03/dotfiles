@@ -45,11 +45,11 @@ return {
 	},
 	keys = {
 		{
-			"<leader>lg",
+			"<leader>ff",
 			function()
-				Snacks.lazygit()
+				Snacks.picker.files()
 			end,
-			desc = "Lazygit",
+			desc = "Project Files",
 		},
 		{
 			"<leader><leader>",
