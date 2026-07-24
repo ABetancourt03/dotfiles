@@ -1,9 +1,10 @@
+@import "../omarchy/current/theme/waybar.css";
 @import "./colors.css";
 
 * {
   min-height: 0;
   min-width: 0;
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: 'CaskaydiaCove Nerd Font';
   font-size: 14px;
 }
 
@@ -11,7 +12,7 @@ window#waybar {
   background-color: transparent;
 }
 
-#waybar > box {
+#waybar>box {
   background: rgba(24, 24, 37, 0.4);
   /* margin: 5px 5px 0; */
 }
@@ -22,8 +23,8 @@ window#waybar {
   margin: 0px 6px 0px 4px;
 }
 
-.modules-left > *,
-.modules-right > * {
+.modules-left>*,
+.modules-right>* {
   margin: 0 4px;
   padding: 0px 8px;
 }
@@ -225,7 +226,7 @@ window#waybar {
   color: @sapphire;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
 }
 
@@ -248,3 +249,4 @@ tooltip label {
     color: transparent;
   }
 }
+
