@@ -11,4 +11,4 @@ window-padding-x = 6
 window-padding-y = 6
 window-padding-color = extend
 window-padding-balance = true
-window-vsync = true
+window-vsync = false
