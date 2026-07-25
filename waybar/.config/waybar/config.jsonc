@@ -4,9 +4,21 @@
   "position": "top",
   "spacing": 0,
   "height": 26,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock", "cpu", "memory", "temperature", "custom/gpu"],
-  "modules-right": ["tray", "bluetooth", "network"],
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock",
+    "cpu",
+    "memory",
+    "temperature",
+    "custom/gpu"
+  ],
+  "modules-right": [
+    "tray",
+    "bluetooth",
+    "network"
+  ],
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
@@ -14,14 +26,14 @@
       "default": "",
       "1": "󰈹",
       "2": "",
-      "3": "󰄄",
+      "3": "",
       "4": "󰧑",
       "5": "",
       "6": "",
       "7": "",
       "8": "󰖣",
       "9": "",
-      "10": "",
+      "10": ""
     },
     "persistent-workspaces": {
       "1": [],
@@ -33,14 +45,14 @@
       "7": [],
       "8": [],
       "9": [],
-      "10": [],
-    },
+      "10": []
+    }
   },
   "cpu": {
     "interval": 5,
     "format": "   {usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
-    "on-click-right": "alacritty",
+    "on-click-right": "alacritty"
   },
   "clock": {
     "format": "{:L%B %d, %A %I:%M %p}",
@@ -49,7 +61,13 @@
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
   },
   "network": {
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
     "format": "{icon}",
     "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
@@ -59,7 +77,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi",
+    "on-click": "omarchy-launch-wifi"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -67,8 +85,30 @@
     "format-charging": "{icon}",
     "format-plugged": "",
     "format-icons": {
-      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
     },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
@@ -78,8 +118,8 @@
     "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
     "states": {
       "warning": 20,
-      "critical": 10,
-    },
+      "critical": 10
+    }
   },
   "bluetooth": {
     "format": "",
@@ -88,15 +128,18 @@
     "format-connected": "󰂱",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "omarchy-launch-bluetooth",
+    "on-click": "omarchy-launch-bluetooth"
   },
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 600,
-      "children-class": "tray-group-item",
+      "children-class": "tray-group-item"
     },
-    "modules": ["custom/expand-icon", "tray"],
+    "modules": [
+      "custom/expand-icon",
+      "tray"
+    ]
   },
   "custom/expand-icon": {
     "format": "",
@@ -104,11 +147,11 @@
     "on-scroll-up": "",
     "on-scroll-down": "",
     "on-scroll-left": "",
-    "on-scroll-right": "",
+    "on-scroll-right": ""
   },
   "tray": {
     "icon-size": 14,
-    "spacing": 10,
+    "spacing": 10
   },
   "memory": {
     "interval": 3,
@@ -116,7 +159,7 @@
     "max-length": 10,
     "tooltip": true,
     "tooltip-format": "RAM Usada: {percentage}%\n({used:0.1f}GiB / {total:0.1f}GiB)",
-    "on-click": "omarchy-launch-or-focus-tui btop",
+    "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "temperature": {
     "thermal-zone": 0,
@@ -124,13 +167,13 @@
     "format-critical": "  {temperatureC}",
     "format": "  {temperatureC}°C",
     "tooltip": true,
-    "tooltip-format": "Temperatura: {temperatureC}°C",
+    "tooltip-format": "Temperatura: {temperatureC}°C"
   },
   "custom/gpu": {
     "interval": 2,
     "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent 2>/dev/null || cat /sys/class/drm/card0/device/gpu_busy_percent 2>/dev/null || echo '0'",
     "format": " 󰢮  {}%",
     "tooltip": true,
-    "tooltip-format": "Uso de la GPU (RX 580): {}%",
-  },
+    "tooltip-format": "Uso de la GPU (RX 580): {}%"
+  }
 }
