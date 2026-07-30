@@ -37,7 +37,7 @@ window#waybar {
 
 /* Workspace buttons */
 #workspaces label {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 #workspaces button {
