@@ -179,8 +179,7 @@
   },
   "memory": {
     "interval": 3,
-    "format": "RAM: {percentage}%",
-    "max-length": 10,
+    "format": "RAM: {used:0.1f}/{total:0.1f}GB ({percentage}%)",
     "tooltip": true,
     "tooltip-format": "RAM Usada: {percentage}%\n({used:0.1f}GiB / {total:0.1f}GiB)",
     "on-click": "omarchy-launch-or-focus-tui btop"
