@@ -8,12 +8,12 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "clock",
-    "custom/separator",
     "cpu",
     "temperature#cpu",
     "custom/separator",
     "memory",
+    "custom/separator",
+    "clock",
     "custom/separator",
     "custom/gpu",
     "temperature",

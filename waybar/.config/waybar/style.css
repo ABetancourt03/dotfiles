@@ -37,7 +37,7 @@ window#waybar {
 
 /* Workspace buttons */
 #workspaces label {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #workspaces button {
@@ -109,7 +109,7 @@ window#waybar {
 
 #clock {
   color: @blue;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #custom-voxtype {
@@ -164,33 +164,33 @@ window#waybar {
 /* Right modules - colors */
 #memory {
   color: @mauve;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #cpu {
   color: @sapphire;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #custom-gpu {
   color: @red;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #custom-vram {
   color: @red;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #temperature {
   color: @red;
   padding: 0 0 0 8;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #temperature.cpu {
   color: @sapphire;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #pulseaudio {
