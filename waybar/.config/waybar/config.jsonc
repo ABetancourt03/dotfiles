@@ -11,8 +11,8 @@
     "clock",
     "cpu",
     "memory",
-    "temperature",
-    "custom/gpu"
+    "custom/gpu",
+    "temperature"
   ],
   "modules-right": [
     "tray",
@@ -50,7 +50,7 @@
   },
   "cpu": {
     "interval": 5,
-    "format": "   {usage}%",
+    "format": "CPU: {usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
     "on-click-right": "alacritty"
   },
@@ -155,24 +155,24 @@
   },
   "memory": {
     "interval": 3,
-    "format": "   {percentage}% ",
+    "format": "RAM: {percentage}%",
     "max-length": 10,
     "tooltip": true,
     "tooltip-format": "RAM Usada: {percentage}%\n({used:0.1f}GiB / {total:0.1f}GiB)",
     "on-click": "omarchy-launch-or-focus-tui btop"
   },
   "temperature": {
-    "thermal-zone": 0,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
-    "format-critical": "  {temperatureC}",
-    "format": "  {temperatureC}°C",
+    "format-critical": " {temperatureC}°C",
+    "format": " {temperatureC}°C",
     "tooltip": true,
     "tooltip-format": "Temperatura: {temperatureC}°C"
   },
   "custom/gpu": {
     "interval": 2,
     "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent 2>/dev/null || cat /sys/class/drm/card0/device/gpu_busy_percent 2>/dev/null || echo '0'",
-    "format": " 󰢮  {}%",
+    "format": "GPU: {}%",
     "tooltip": true,
     "tooltip-format": "Uso de la GPU (RX 580): {}%"
   }

@@ -89,7 +89,9 @@ window#waybar {
 #pulseaudio,
 #bluetooth,
 #network,
-#disk {
+#disk,
+#temperature,
+#custom-gpu {
   padding: 0 8px;
 }
 
@@ -169,6 +171,11 @@ window#waybar {
 }
 
 #custom-gpu {
+  color: @red;
+  font-size: 13px;
+}
+
+#temperature {
   color: @red;
   font-size: 13px;
 }
