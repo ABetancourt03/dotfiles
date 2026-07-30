@@ -9,15 +9,22 @@
   ],
   "modules-center": [
     "clock",
+    "custom/separator",
     "cpu",
+    "temperature#cpu",
+    "custom/separator",
     "memory",
+    "custom/separator",
     "custom/gpu",
-    "temperature"
+    "temperature",
+    "custom/separator",
+    "custom/vram"
   ],
   "modules-right": [
     "tray",
     "bluetooth",
-    "network"
+    "network",
+    "pulseaudio"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -58,7 +65,7 @@
     "format": "{:L%B %d, %A %I:%M %p}",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
   "network": {
     "format-icons": [
@@ -78,6 +85,23 @@
     "interval": 3,
     "spacing": 1,
     "on-click": "omarchy-launch-wifi"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -169,11 +193,29 @@
     "tooltip": true,
     "tooltip-format": "Temperatura: {temperatureC}°C"
   },
+  "temperature#cpu": {
+    "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": " {temperatureC}°C",
+    "format": " {temperatureC}°C",
+    "tooltip": true,
+    "tooltip-format": "Temperatura: {temperatureC}°C"
+  },
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
   "custom/gpu": {
     "interval": 2,
     "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent 2>/dev/null || cat /sys/class/drm/card0/device/gpu_busy_percent 2>/dev/null || echo '0'",
     "format": "GPU: {}%",
     "tooltip": true,
     "tooltip-format": "Uso de la GPU (RX 580): {}%"
+  },
+  "custom/vram": {
+    "exec": "awk 'NR==1{u=$1} NR==2{t=$1; printf \"%.1f/%.1f GiB (%.0f%%)\", u/1073741824, t/1073741824, (u/t)*100}' /sys/class/drm/card1/device/mem_info_vram_used /sys/class/drm/card1/device/mem_info_vram_total",
+    "interval": 3,
+    "format": "VRAM: {}",
+    "tooltip": false
   }
 }
