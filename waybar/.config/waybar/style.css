@@ -47,15 +47,15 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: @mauve;
+  color: @lavender;
 }
 
 #workspaces button.empty {
-  color: @muted;
+  color: @overlay;
 }
 
 #workspaces button.empty.active {
-  color: @mauve;
+  color: @lavender;
 }
 
 #workspaces button:hover {
@@ -110,6 +110,7 @@ window#waybar {
 #clock {
   color: @blue;
   font-size: 12px;
+  font-weight: 900;
 }
 
 #custom-voxtype {
@@ -167,30 +168,35 @@ window#waybar {
   font-size: 12px;
 }
 
+#cpu,
+#temperature.cpu,
+#memory,
+#custom-gpu,
+#temperature,
+#custom-vram {
+  font-size: 10px;
+  font-weight: 900;
+}
+
 #cpu {
-  color: @sapphire;
-  font-size: 12px;
+  color: @lavender;
 }
 
 #custom-gpu {
   color: @red;
-  font-size: 12px;
 }
 
 #custom-vram {
-  color: @red;
-  font-size: 12px;
+  color: @yellow;
 }
 
 #temperature {
   color: @red;
   padding: 0 0 0 8;
-  font-size: 12px;
 }
 
 #temperature.cpu {
-  color: @sapphire;
-  font-size: 12px;
+  color: @lavender;
 }
 
 #pulseaudio {
