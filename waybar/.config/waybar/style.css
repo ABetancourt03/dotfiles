@@ -110,7 +110,7 @@ window#waybar {
 #clock {
   color: @blue;
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 #custom-voxtype {
