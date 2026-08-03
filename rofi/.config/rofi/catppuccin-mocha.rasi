@@ -18,9 +18,10 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 360px;
-    border: 3px;
-    border-color: @border-col;
+    border: 2px;
+    border-color: @blue;
     background-color: @bg-col;
+    border-radius: 4px;
 }
 
 mainbox {
@@ -75,7 +76,7 @@ element-icon {
 
 element selected {
     background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+    text-color: @blue  ;
 }
 
 mode-switcher {
