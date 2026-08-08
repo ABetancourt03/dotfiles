@@ -1,0 +1,38 @@
+onboarding = false
+[theme]
+name = "catppuccin"
+
+auto_switch = false
+[keys]
+prefix = "ctrl+s"
+
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+
+split_vertical = "prefix+%"
+split_horizontal = 'prefix+"'
+
+toggle_sidebar = "prefix+p"
+
+[[keys.command]]
+key = "prefix+ctrl+r"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.restore"
+description = "resurrect: restore"
+
+[[keys.command]]
+key = "prefix+shift+s"
+type = "plugin_action"
+command = "ntindle.herdr-resurrect.save"
+description = "resurrect: save"
+
+[ui.toast]
+delivery = "system"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+[experimental]
+kitty_graphics = true

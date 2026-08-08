@@ -1,0 +1,242 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "wB",
+      "custom_name": "configs",
+      "identity_cwd": "/home/btw/.config",
+      "public_pane_numbers": {
+        "2": 2,
+        "1": 17,
+        "11": 27
+      },
+      "next_public_pane_number": 28,
+      "public_tab_numbers": [
+        1,
+        2,
+        15
+      ],
+      "next_public_tab_number": 16,
+      "tabs": [
+        {
+          "custom_name": "home",
+          "layout": {
+            "Pane": 1
+          },
+          "panes": {
+            "1": {
+              "cwd": "/home/btw/.config"
+            }
+          },
+          "zoomed": false,
+          "focused": 1,
+          "root_pane": 1
+        },
+        {
+          "custom_name": "neovimrc",
+          "layout": {
+            "Pane": 2
+          },
+          "panes": {
+            "2": {
+              "cwd": "/home/btw/.config/nvim"
+            }
+          },
+          "zoomed": false,
+          "focused": 2,
+          "root_pane": 2
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 11
+          },
+          "panes": {
+            "11": {
+              "cwd": "/home/btw/dotfiles"
+            }
+          },
+          "zoomed": false,
+          "focused": 11,
+          "root_pane": 11
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wC",
+      "custom_name": "dolar-tracker",
+      "identity_cwd": "/home/btw/Dev/dolar-tracker",
+      "public_pane_numbers": {
+        "4": 2,
+        "5": 3,
+        "3": 5
+      },
+      "next_public_pane_number": 7,
+      "public_tab_numbers": [
+        5,
+        2,
+        3
+      ],
+      "next_public_tab_number": 7,
+      "tabs": [
+        {
+          "custom_name": "opencode",
+          "layout": {
+            "Pane": 3
+          },
+          "panes": {
+            "3": {
+              "cwd": "/home/btw/Dev/dolar-tracker"
+            }
+          },
+          "zoomed": false,
+          "focused": 3,
+          "root_pane": 3
+        },
+        {
+          "custom_name": "neovim",
+          "layout": {
+            "Pane": 4
+          },
+          "panes": {
+            "4": {
+              "cwd": "/home/btw/Dev/dolar-tracker"
+            }
+          },
+          "zoomed": false,
+          "focused": 4,
+          "root_pane": 4
+        },
+        {
+          "custom_name": "localhost",
+          "layout": {
+            "Pane": 5
+          },
+          "panes": {
+            "5": {
+              "cwd": "/home/btw/Dev/dolar-tracker"
+            }
+          },
+          "zoomed": false,
+          "focused": 5,
+          "root_pane": 5
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wD",
+      "custom_name": "portfolio",
+      "identity_cwd": "/home/btw/Dev/portfolio",
+      "public_pane_numbers": {
+        "8": 3,
+        "6": 1,
+        "7": 2
+      },
+      "next_public_pane_number": 6,
+      "public_tab_numbers": [
+        1,
+        2,
+        3
+      ],
+      "next_public_tab_number": 4,
+      "tabs": [
+        {
+          "custom_name": "opencode",
+          "layout": {
+            "Pane": 6
+          },
+          "panes": {
+            "6": {
+              "cwd": "/home/btw/Dev/portfolio"
+            }
+          },
+          "zoomed": false,
+          "focused": 6,
+          "root_pane": 6
+        },
+        {
+          "custom_name": "neovim",
+          "layout": {
+            "Pane": 7
+          },
+          "panes": {
+            "7": {
+              "cwd": "/home/btw/Dev/portfolio"
+            }
+          },
+          "zoomed": false,
+          "focused": 7,
+          "root_pane": 7
+        },
+        {
+          "custom_name": "localhost",
+          "layout": {
+            "Pane": 8
+          },
+          "panes": {
+            "8": {
+              "cwd": "/home/btw/Dev/portfolio"
+            }
+          },
+          "zoomed": false,
+          "focused": 8,
+          "root_pane": 8
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wE",
+      "custom_name": "omniroute",
+      "identity_cwd": "/home/btw/Dev/omniroute-test",
+      "public_pane_numbers": {
+        "10": 2,
+        "9": 1
+      },
+      "next_public_pane_number": 3,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 9
+          },
+          "panes": {
+            "9": {
+              "cwd": "/home/btw/Dev/omniroute-test"
+            }
+          },
+          "zoomed": false,
+          "focused": 9,
+          "root_pane": 9
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 10
+          },
+          "panes": {
+            "10": {
+              "cwd": "/home/btw/Dev/omniroute-test"
+            }
+          },
+          "zoomed": false,
+          "focused": 10,
+          "root_pane": 10
+        }
+      ],
+      "active_tab": 0
+    }
+  ],
+  "active": 0,
+  "selected": 0,
+  "sidebar_width": 28,
+  "sidebar_section_split": 0.5,
+  "collapsed_space_keys": []
+}
